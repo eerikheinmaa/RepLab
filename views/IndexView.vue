@@ -1,12 +1,7 @@
 <template>
-
-  <head>
-    <meta charset="UTF-8">
-    <title>Web server</title>
-  </head>
-
-  <body>
-    <div class="Home_page">
+  <h1 style="color: white">HI</h1>
+  <router-link to="/about">Got to about</router-link>
+  <div class="Home_page">
       <div class="Calender">
 
       </div>
@@ -26,11 +21,6 @@
       <!-- <div id="app"></div> 
       <script type="module" src="/src/main.js"></script>-->
     </div>
-  </body>
-
-  </html>
 </template>
 
-<script setup>
-import { onMounted } from 'vue'
-</script>
+<script setup></script>
