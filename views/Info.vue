@@ -1,8 +1,67 @@
 <template>
-  <router-link to="/">Back</router-link>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <h1 style="color: white">HI</h1>
+  <router-link :to="'/help/' + choice.name"></router-link>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Info</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="app">
+    <div class="calender">
+      <button class="calender-extencion" ><img src="assets/arrow.svg" class="arrow"></button>
+      <h3 class="calender-text">15.12</h3>
+      <h3 class="calender-text">14.12</h3>
+      <h3 class="calender-text">13.12</h3>
+      <h3 class="calender-text">12.12</h3>
+      <h3 class="calender-text today">11.12</h3>
+      <h3 class="calender-text">10.12</h3>
+      <h3 class="calender-text">09.12</h3>
+      <h3 class="calender-text">08.12</h3>
+      <h3 class="calender-text">07.12</h3>
+
+
+    </div>
+    <div class="info">
+      <h1>BENCH PRESS</h1>
+      <div class="description">
+        <div class="text1">
+        <h2>The bench press is a strength exercise that works the chest, shoulders, and</h2>
+        </div>
+        <div class="image">
+          <img src="assets/bench.png" class="bench">
+        </div>
+      </div>
+      <div class="text2">
+        <h2>triceps. Lie flat on a bench with your feet on the ground, grip the barbell slightly wider than shoulder-width, and lower it to your chest. Press it back up until your arms are fully extended, keeping controlled form and using a spotter if needed.</h2>
+      </div>
+   </div>
+
+
+
+    <div class="footer">
+      <div class="footer-pictures">
+        <button class="footer-buttons">
+          <img src="assets/profile.svg" class="profile">
+        </button>
+        <button class="footer-buttons">
+          <img src="assets/home1.svg" class="home">
+        </button>
+        <button class="footer-buttons">
+          <img src="assets/plans.svg" class="plans">
+        </button>
+        <button class="footer-buttons">
+          <img src="assets/help.svg" class="help">
+        </button>
+      </div>
+    </div>
+
+
   </div>
+  <script src="script.js"></script>
+</body>
 </template>
 
 <style>
@@ -30,16 +89,16 @@ html, body {
 h1 {
   color: white;
   font-family: Oswald;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: normal;
   margin-left: 40px;
   margin-bottom: 20px;
 }
 
 h2 {
-  font-size: 20px;
-  font-family: Roboto;
-  font-weight: bold;
+  font-size: 25px;
+  font-family: Oswald;
+  font-weight: normal;
   color: white;
   margin-bottom: 8px;
   margin-top: 3px;
@@ -176,18 +235,29 @@ h3 {
   border-top: 2px solid white;
   z-index: 1;
   position: relative;
-  margin-top: 240px;
+  margin-top: 415px;
 }
 
-
-
-.map{
-  width: 83%;
-  height: 400px;
-  margin-left: 40px;
-  margin-right: 30px;
-  border: 2px solid white;
-  margin-bottom: 40px;
+.bench{
+  width: auto;
+  height: 150px;
+  margin-right: 20px;
 }
 
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.description{
+  display: flex;
+  flex-direction: row;
+}
+
+.text2 {
+  margin-top: -10px;
+  margin-right: 20px;
+}
 </style>
+
+<script setup></script>
