@@ -1,7 +1,6 @@
 <template>
-  <h1 style="color: white">HI</h1>
   <router-link :to="'/help/' + choice.name"></router-link>
-  <head>
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Info</title>
@@ -21,21 +20,14 @@
       <h3 class="calender-text">09.12</h3>
       <h3 class="calender-text">08.12</h3>
       <h3 class="calender-text">07.12</h3>
-
-
     </div>
+
+
     <div class="info">
-      <h1>BENCH PRESS</h1>
-      <div class="description">
-        <div class="text1">
-        <h2>The bench press is a strength exercise that works the chest, shoulders, and</h2>
-        </div>
-        <div class="image">
-          <img src="assets/bench.png" class="bench">
-        </div>
-      </div>
-      <div class="text2">
-        <h2>triceps. Lie flat on a bench with your feet on the ground, grip the barbell slightly wider than shoulder-width, and lower it to your chest. Press it back up until your arms are fully extended, keeping controlled form and using a spotter if needed.</h2>
+      <h1 id="headtext"></h1>
+      <div id="container">
+        <div id="image"></div>
+        <h2 id="text">The bench press is a strength exercise that works the chest, shoulders, and</h2>        
       </div>
    </div>
 
@@ -57,10 +49,7 @@
         </button>
       </div>
     </div>
-
-
   </div>
-  <script src="script.js"></script>
 </body>
 </template>
 

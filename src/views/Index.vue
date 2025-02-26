@@ -1,76 +1,57 @@
+<script setup>
+import { computed } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+
+const router = useRouter()
+const route = useRoute()
+</script>
+
 <template>
-  <h1 style="color: white">HI</h1>
-  <router-link to="/"></router-link>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap"
-    rel="stylesheet">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet">
   </head>
 
   <body>
-    <div class="app">
-      <div class="calender">
-        <button class="calender-extencion"><img src="assets/arrow.svg" class="arrow"></button>
-        <h3 class="calender-text">15.12</h3>
-        <h3 class="calender-text">14.12</h3>
-        <h3 class="calender-text">13.12</h3>
-        <h3 class="calender-text">12.12</h3>
-        <h3 class="calender-text today">11.12</h3>
-        <h3 class="calender-text">10.12</h3>
-        <h3 class="calender-text">09.12</h3>
-        <h3 class="calender-text">08.12</h3>
-        <h3 class="calender-text">07.12</h3>
 
+    <div class="news">
+      <h1 class="greeting"> HELLO, JOHN!</h1>
+      <div class="news1">
+        <h2 class="mike">MIKE TYSON DEAD AT 57</h2>
+        <h3>AFTER YEARS OF FIGHTING MIK...</h3>
+      </div>
+      <div class="news2">
+        <h2 class="lebron">LEBRON SPOTTED AT WENDYS</h2>
+        <h3>LEBRON IS A GLIZZY GOBBLER...</h3>
+      </div>
+      <p2> class="small-text">READ MORE</p2>
+    </div>
 
+    <div class="nutrition">
+      <div>
+        <h2 class="daily-nutrition">DAILY NUTRITON</h2>
       </div>
-      <div class="news">
-        <h1 class="greeting"> HELLO, JOHN!</h1>
-        <div class="news1">
-          <h2 class="mike">MIKE TYSON DEAD AT 57</h2>
-          <h3>AFTER YEARS OF FIGHTING MIK...</h3>
-        </div>
-        <div class="news2">
-          <h2 class="lebron">LEBRON SPOTTED AT WENDYS</h2>
-          <h3>LEBRON IS A GLIZZY GOBBLER...</h3>
-        </div>
-        <p class="small-text">READ MORE</p2>
+      <div class="nutrition-pictures">
+        <img src="/src/assets/water.svg" class="water">
+        <img src="/src/assets/calories.svg" class="calories">
+        <img src="/src/assets/protein.svg" class="protein">
       </div>
+      <button class="open-button">
+        <p class="big-text">OPEN</p>
+      </button>
+    </div>
+    <div class="start-workout-button">
+      <button class="start-workout">
+        <p class="big-text">START WORKOUT</p>
+      </button>
+    </div>
 
-      <div class="nutrition">
-        <div>
-          <h2 class="daily-nutrition">DAILY NUTRITON</h2>
-        </div>
-        <div class="nutrition-pictures">
-          <img src="assets/water.svg" class="water">
-          <img src="assets/calories.svg" class="calories">
-          <img src="assets/protein.svg" class="protein">
-        </div>
-        <button class="open-button">
-          <p class="big-text">OPEN</p>
-        </button>
-      </div>
-      <div class="start-workout-button">
-        <button class="start-workout">
-          <p class="big-text">START WORKOUT</p>
-        </button>
-      </div>
-      <div class="footer">
-        <div class="footer-pictures">
-          <button class="footer-buttons">
-            <img src="assets/profile.svg" class="profile">
-          </button>
-          <button class="footer-buttons">
-            <img src="assets/home.svg" class="home">
-          </button>
-          <button class="footer-buttons">
-            <img src="assets/plans.svg" class="plans">
-          </button>
-          <button class="footer-buttons">
-            <img src="assets/help.svg" class="help">
-          </button>
-        </div>
-      </div>
+  </body>
+
 </template>
 
 <style>
@@ -346,5 +327,3 @@ h3 {
   position: relative;
 }
 </style>
-
-<script setup></script>

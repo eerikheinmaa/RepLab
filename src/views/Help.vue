@@ -1,5 +1,4 @@
 <template>
-  <h1 style="color: white">HI</h1>
   <router-link to="/help">Got to help</router-link>
   <head>
   <meta charset="utf-8">

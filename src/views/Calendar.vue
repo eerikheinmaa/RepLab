@@ -1,5 +1,4 @@
 <template>
-  <h1 style="color: white">HI</h1>
   <router-link to="/calendar">Got to about</router-link>
   <head>
   <meta charset="utf-8">
@@ -24,19 +23,19 @@
         </div>
         <div class="number-row">
           <div class="days">T</div>
-          <div class=" numbers">2</div>
-          <div class=" numbers">9</div>
-          <div class=" numbers">16</div>
-          <div class=" numbers">23</div>
-          <div class=" numbers">30</div>
+          <div class="numbers">2</div>
+          <div class="numbers">9</div>
+          <div class="numbers">16</div>
+          <div class="numbers">23</div>
+          <div class="numbers">30</div>
         </div>
         <div class="number-row">
           <div class="days">W</div>
-          <div class=" numbers">3</div>
-          <div class=" numbers">10</div>
-          <div class=" numbers">17</div>
-          <div class=" numbers">24</div>
-          <div class=" numbers">31</div>
+          <div class="numbers">3</div>
+          <div class="numbers">10</div>
+          <div class="numbers">17</div>
+          <div class="numbers">24</div>
+          <div class="numbers">31</div>
         </div>
          <div class="number-row">
            <div class="days">T</div>
@@ -74,46 +73,6 @@
       </div>
       <button class="calender-extencion" ><img src="assets/arrow.svg" class="arrow"></button>
     </div>
-
-
-    <div class="nutrition">
-      <div>
-        <h2 class="daily-nutrition">DAILY NUTRITON</h2>
-      </div>
-      <div class="nutrition-pictures"> 
-          <img src="assets/water.svg" class="water">
-          <img src="assets/calories.svg" class="calories">
-          <img src="assets/protein.svg" class="protein">
-      </div>
-      <button class="open-button">
-        <p class="big-text">OPEN</p>
-      </button>
-    </div>
-    <div class="start-workout-button">
-      <button class="start-workout">
-        <p class="big-text">START WORKOUT</p>
-      </button>
-    </div>
-    <div class="footer">
-      <div class="footer-pictures">
-        <button class="footer-buttons">
-          <img src="assets/profile.svg" class="profile">
-        </button>
-        <button class="footer-buttons">
-          <img src="assets/home.svg" class="home">
-        </button>
-        <button class="footer-buttons">
-          <img src="assets/plans.svg" class="plans">
-        </button>
-        <button class="footer-buttons">
-          <img src="assets/help.svg" class="help">
-        </button>
-      </div>
-    </div>
-
-
-  </div>
-  <script src="script.js"></script>
 </body>
 </template>
 
