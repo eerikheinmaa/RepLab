@@ -1,0 +1,10 @@
+{
+    "bench" : {
+        "text" : "The bench press is a strength exercise that works the chest, shoulders, and triceps. Lie flat on a bench with your feet on the ground, grip the barbell slightly wider than shoulder-width, and lower it to your chest. Press it back up until your arms are fully extended, keeping controlled form and using a spotter if needed.",
+        "image" : "/src/assets/exercise_image/bench.img"
+    },
+    "pecdeck" : {
+        "text" : "",
+        "image" : ""
+    }
+}
