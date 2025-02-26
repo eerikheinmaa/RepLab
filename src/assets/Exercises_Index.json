@@ -1,10 +1,204 @@
 {
-    "bench" : {
+    "BENCH" : {
         "text" : "The bench press is a strength exercise that works the chest, shoulders, and triceps. Lie flat on a bench with your feet on the ground, grip the barbell slightly wider than shoulder-width, and lower it to your chest. Press it back up until your arms are fully extended, keeping controlled form and using a spotter if needed.",
         "image" : "/src/assets/exercise_image/bench.img"
     },
-    "pecdeck" : {
-        "text" : "",
-        "image" : ""
-    }
+
+    "PEC DECK" : {
+        "text" : "The Pec Deck is a
+machine exercise
+designed to target
+the chest muscles,
+particularly the pectoralis major.
+
+1. Adjust the seat and set the height so your elbows are at chest level when sitting.
+2. Place your arms on the pads or grips with elbows bent at 90 degrees.
+3. Keep your feet flat on the floor for stability. This is the starting position.
+4. Slowly bring your arms forward, squeezing your chest.
+5. Briefly squeeze your chest at the peak of the movement.
+6. Control the movement as you slowly return to the starting position. This is one rep.
+7. Repeat for desired repetitions.";
+        "image" : "/src/assets/exercise_image/pec-deck.img"
+    },
+
+	"TRICEP PUSHDOWNS" : {
+        "text" : "The tricep
+pushdown is one of
+the best exercises
+for triceps
+development. While the upper-body exercise is usually done on a machine, you can also do the move at home using a resistance band.
+1. Brace your abdominals.
+2. Tuck your elbows at your sides and position your feet slightly apart.
+3. Inhale. Push down until your elbows are fully extended but not yet in the straight position. Keep your elbows close to your body and bend your knees slightly on the pushdown. Resist bending forward. Keep your back as straight as possible as you push down.
+4. As you exhale, return to the starting point using a controlled movement. Try not to crash the weights.";
+        "image" : "/src/assets/exercise_image/tricep-pushdown.img"
+    },
+
+	"ROWS" : {
+        "text" : "The row exercise
+helps to develop
+the major back
+muscles, which can
+change the appearance of your upper body and also help to improve how you move in your day to day and when playing sports. There are many variations of rows you can perform in the gym.
+* Think about keeping your shoulders down as you perform a row to avoid hunching your shoulders up to your ears.
+* When you pull the weight in towards you, think about squeezing your shoulder blades to contract your back muscles.
+* Brace your core when performing this movement to help keep your torso stable.";
+        "image" : "/src/assets/exercise_image/rows.img"
+    },
+
+	"LAT PULLDOWNS" : {
+        "text" : "The lat pulldown
+exercise works the
+back muscles and
+is performed at a
+workstation with adjustable resistance, usually plates.
+While seated, pull the hanging bar toward chin level and release it back up with control to complete one repetition. The lat pulldown can be done as part of an upper-body strength workout.";
+        "image" : "/src/assets/exercise_image/lat-pull-downs.img"
+    },
+
+	"DEADLIFT" : {
+        "text" : "The deadlift is a
+great way to build
+strong legs and butt
+In a deadlift, you lift
+weight from the ground to thigh level using primarily your leg and hip muscles.
+1. Grasp the bar with an overhand or mixed grip.
+2. Position your feet shoulder-width apart with toes under the bar. Maintain a neutral spine position.
+3. Engage your abdominal muscles.
+4. Bring the weight down as far as you can while maintaining proper form, softening your knees, and keeping your back flat.
+5. Lift the bar by pushing upward with the legs from the knees. Breathe out on exertion.
+6. The bar should almost graze the shins and rest around the thighs as you reach full height. Pull the shoulders back as much as possible without bending backward.
+7. Lower the bar toward the floor with a reverse motion ensuring a straight back.
+8. Repeat for your desired number of repetitions.";
+        "image" : "/src/assets/exercise_image/deadlift.img"
+    },
+
+	"SQUAT" : {
+        "text" : "The squat is a powerful 
+exercise to strengthen 
+your legs, core, and glutes. It involves lowering your hips and pushing back up, primarily using your quads, glutes, and hamstrings.
+Stand with feet shoulder-width apart, toes slightly pointing outward.
+Engage your core and maintain a neutral spine throughout the movement.
+1. Grip the barbell across your upper back (high bar) or lower traps (low bar), keeping your elbows down and chest lifted.
+2. Push your hips back and bend your knees, lowering your body as if sitting into a chair. Keep your knees tracking over your toes.
+3. Go as low as your mobility allows while maintaining a flat back—ideally thighs parallel to the floor or lower.
+4. Drive through your heels to stand back up, extending your hips and knees simultaneously.
+5. Keep the bar stable and core engaged as you return to the starting position.
+6. Repeat for the desired number of repetitions, focusing on form and control.";
+        "image" : "/src/assets/exercise_image/squat.img"
+    },
+
+	"LEG EXTENSION" : {
+        "text" : "The leg extension 
+is an excellent 
+isolation exercise to target and strengthen the quadriceps, the muscles at the front of your thighs.
+1. Sit on the leg extension machine with your back firmly pressed against the backrest. Adjust the pad so it rests on your lower shins, just above your ankles.
+2. Grip the handles on the sides of the machine for stability.
+3. Engage your core and keep your upper body upright with a neutral spine.
+4. Extend your legs by pushing the pad upward, fully straightening your knees. Avoid locking out the knees at the top.
+5. Squeeze your quadriceps at the top of the movement and hold for a brief pause.
+6. Lower the weight back down slowly and under control, keeping tension on the quadriceps.
+7. Repeat for the desired number of repetitions, ensuring a controlled tempo throughout.";
+        "image" : "/src/assets/exercise_image/leg-extension.img"
+    },
+
+	"HAMSTRING CURLS" : {
+        "text" : "The hamstring curl 
+is a great isolation 
+exercise to strengthen 
+the hamstrings, the muscles on the back of your thighs.
+1. Lie face down on the hamstring curl machine (prone position) with the pad positioned just above your ankles. Adjust the machine for comfort and proper range of motion.
+2. Grip the handles on the sides of the machine for stability.
+3. Engage your core and keep your hips pressed into the bench to avoid lifting them during the movement.
+4. Curl your legs upward by bending your knees, pulling the pad toward your glutes in a smooth and controlled motion.
+5. Squeeze your hamstrings at the top of the movement and hold for a brief pause.
+6. Slowly lower the weight back down to the starting position, maintaining control and avoiding letting the weight drop.
+7. Repeat for the desired number of repetitions, focusing on form and control throughout the movement.";
+        "image" : "/src/assets/exercise_image/hamstring-curls.img"
+    },
+
+	"CALF RAISES" : {
+        "text" : "The calf raise is an 
+effective exercise to 
+strengthen and develop 
+the calf muscles, primarily targeting the gastrocnemius and soleus for better lower leg strength and definition.
+1. Stand tall with the balls of your feet on an elevated platform (such as a step or calf raise machine) with your heels hanging off the edge.
+2. Keep your core engaged and your back straight. Maintain a slight bend in your knees to avoid locking them.
+3. Push through the balls of your feet, raising your heels as high as possible while contracting your calf muscles.
+4. Pause at the top of the movement to maximize the squeeze in your calves.
+5. Slowly lower your heels back down below the level of the platform to achieve a full stretch in the calves.
+6. Focus on smooth, controlled movements, avoiding any bouncing or jerking motions.
+7. Repeat for the desired number of repetitions, maintaining proper form throughout.";
+        "image" : "/src/assets/exercise_image/calf-raises.img"
+    },
+
+	"TRICEP EXTENSIONS" : {
+        "text" : "The tricep extension
+is an isolation
+exercise that works
+the muscle on the
+back of the upper arm. The triceps extension exercise is an isolation exercise because it involves movement in only one joint, the elbow joint.
+1. Lift the dumbbell directly overhead. Ensure the head stays aligned over the chest, the core remains engaged, and the shoulders are relaxed.
+2. Extend both arms fully, then exhale and slowly lower the weight, bringing the weight behind the head by bending at the elbows. Be sure the chest stays aligned over the hips and the back does not arch.
+3. Inhale and reverse the movement once you reach a 90-degree bend at the elbow or slightly further, lifting the weight back to the starting position. The weight should not touch the back of the head when it is in its lowest position.";
+        "image" : "/src/assets/exercise_image/trice-extensions.img"
+    },
+
+	"DUMBELL FLYS" : {
+        "text" : "The dumbbell fly
+utilizes a chest fly
+movement pattern
+to isolate the
+muscles fo the chest to better help the muscles grow and become stronger.
+1. Pick up the dumbbells off the floor using a neutral grip (palms facing in). Position the ends of the dumbbells in your hip crease, and sit down on the bench.
+2. To get into position, lay back and keep the weights close to your chest. Once you are in position, take a deep breath, then press the dumbbells to lockout at the top.
+3. Slightly retract your shoulder blades, unlock your elbows, and slowly lower the dumbbells laterally while maintaining the angle at your elbow.
+4. Once the dumbbells reach chest level, reverse the movement by squeezing your pecs together and bringing the dumbbells back to their starting position.
+5. Without allowing the dumbbells to touch, start the next repetition, and continue until the set is completed.";
+        "image" : "/src/assets/exercise_image/dumbell-flys.img"
+    },
+
+	"INCLINE BENCH PRESS" : {
+        "text" : "The incline bench
+press is a variation
+of the bench press
+and used to build
+the muscles of the chest.
+1. Lie flat on an incline bench and set your hands just outside of shoulder width.
+2. Set your shoulder blades by pinching them together and driving them into the bench.
+3. Take a deep breath and allow your spotter to help you with the lift off in order to maintain tightness through your upper back.
+4. Let the weight settle and ensure your upper back remains tight after lift off.
+5. Inhale and allow the bar to descend slowly by unlocking the elbows.
+6. Lower the bar in a straight line to the base of the sternum (breastbone) and touch the chest.
+7. Push the bar back up in a straight line by pressing yourself into the bench, driving your feet into the floor for leg drive, and extending the elbows.
+8. Repeat for the desired number of repetitions.";
+        "image" : "/src/assets/exercise_image/inc-bench-press.img"
+    },
+
+	"SEATED ROWS" : {
+        "text" : "The seated cable
+row develops the
+muscles of the back
+and the forearms. It
+is an excellent all-around compound exercise for developing the middle back while offering useful arm work as well.
+
+1. Pull the handle and weight back toward the lower abdomen while trying not to use the momentum of the row too much by moving the torso backward with the arms.
+2. Target the middle to upper back by keeping your back straight and squeezing your shoulder blades together as you row, keeping your chest out.
+3. Return the handle forward under tension to full stretch, remembering to keep that back straight even though flexed at the hips. Repeat the exercise for the desired number of repetitions.";
+        "image" : "/src/assets/exercise_image/seated-rows.img"
+    },
+
+	"PULL UPS" : {
+        "text" : "The Pullup is an
+upper-body,
+compound exercise.
+Your back and arms
+pull your body up while your abs prevent your lower back from arching. You can emphasize your arms by gripping the bar with your palms facing up. These are Chinups and they’re effective for building bigger arms.
+1. Grab the pullup bar with your palms down (shoulder-width grip)
+2. Hang to the pullup-bar with straight arms and your legs off the floor
+3. Pull yourself up by pulling your elbows down to the floor
+4. Go all the way up until your chin passes the be bar
+5. Lower yourself until your arms are straight";
+        "image" : "/src/assets/exercise_image/pull-ups.img"
+    },
 }
