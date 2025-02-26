@@ -9,46 +9,14 @@
 
 <body>
   <div class="app">
-    <div class="calender">
-      <button class="calender-extencion" ><img src="assets/arrow.svg" class="arrow"></button>
-      <h3 class="calender-text">15.12</h3>
-      <h3 class="calender-text">14.12</h3>
-      <h3 class="calender-text">13.12</h3>
-      <h3 class="calender-text">12.12</h3>
-      <h3 class="calender-text today">11.12</h3>
-      <h3 class="calender-text">10.12</h3>
-      <h3 class="calender-text">09.12</h3>
-      <h3 class="calender-text">08.12</h3>
-      <h3 class="calender-text">07.12</h3>
-    </div>
-
-
     <div class="info">
       <h1 id="headtext"></h1>
       <div id="container">
         <div id="image"></div>
-        <h2 id="text">The bench press is a strength exercise that works the chest, shoulders, and</h2>        
+        <h2 id="text">The bench press is a strength exercise that works the chest, shoulders, and</h2>
       </div>
    </div>
 
-
-
-    <div class="footer">
-      <div class="footer-pictures">
-        <button class="footer-buttons">
-          <img src="assets/profile.svg" class="profile">
-        </button>
-        <button class="footer-buttons">
-          <img src="assets/home1.svg" class="home">
-        </button>
-        <button class="footer-buttons">
-          <img src="assets/plans.svg" class="plans">
-        </button>
-        <button class="footer-buttons">
-          <img src="assets/help.svg" class="help">
-        </button>
-      </div>
-    </div>
   </div>
 </body>
 </template>
@@ -110,9 +78,9 @@ h3 {
   border: 2px solid black;
   border-color: black;
   position: relative;
-  overflow: hidden; 
+  overflow: hidden;
   background-color: #0D0101;
-  padding-bottom: 50px; 
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
 }
@@ -121,9 +89,9 @@ h3 {
   display: flex;
   align-items: center;
   flex-direction: row;
-  width: 100%; 
+  width: 100%;
   height: 50px;
-  overflow-x: auto; 
+  overflow-x: auto;
   white-space: nowrap;
   scrollbar-width: none;
   background-color: #0D0101;
@@ -191,7 +159,7 @@ h3 {
 
 .help {
   width: 40px;
-  height: 40px; 
+  height: 40px;
   margin-right: 30px;
   margin-left: 30px;
   border: 2px solid white;
@@ -219,7 +187,7 @@ h3 {
   align-items: center;
   background-color: #26262d;
   width: 100%;
-  bottom: 0; 
+  bottom: 0;
   padding: 10px 0;
   border-top: 2px solid white;
   z-index: 1;

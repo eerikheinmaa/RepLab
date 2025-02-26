@@ -1,6 +1,28 @@
-<template>
-  <div class="app">
+<script setup>
+import { RouterLink, RouterView } from 'vue-router'
+import HelloWorld from './components/HelloWorld.vue'
 
+const calendar_cl = document.getElementById("Opened");
+const calendar_op = document.getElementById("Closed");
+
+const arrows = document.querySelectorAll(".arrow");
+
+for (const element of arrows) {
+  element.addEventListener("click", function () {
+    if (calendar_cl.style.display === "block") {
+      calendar_cl.style.display = "none";
+      calendar_op.style.display = "block";
+    } else {
+      calendar_cl.style.display = "block";
+      calendar_op.style.display = "none";
+    }
+  })
+}
+
+</script>
+
+<template>
+  <header>
     <div class="calender" id="Closed">
       <button class="calender-extencion"><img src="/src/assets/arrow.svg" class="arrow"></button>
       <h3 class="calender-text">15.12</h3>
@@ -79,39 +101,50 @@
       </div>
       <button class="calender-extencion"><img src="/src/assets/arrow.svg" class="arrow"></button>
     </div>
+  </header>
 
-    <main>
-      <router-view />
-    </main>
+  <RouterView />
 
-    <div class="footer">
-
-      <div class="footer-pictures">
-        <RouterLink to="/profile" class="footer-buttons">
-          <img src="/src/assets/profile.svg" class="profile">
-        </RouterLink>
-        <RouterLink to="/" class="footer-buttons">
-          <img src="/src/assets/home1.svg" class="home">
-        </RouterLink>
-        <RouterLink to="/plans" class="footer-buttons">
-          <img src="/src/assets/plans.svg" class="plans">
-        </RouterLink>
-        <RouterLink to="/help" class="footer-buttons">
-          <img src="/src/assets/help.svg" class="help">
-        </RouterLink>
-      </div>
-    </div>
-  </div>
+  <footer>
+    <RouterLink to="/profile" class="footer-buttons">
+      <img src="/src/assets/profile.svg" class="profile">
+    </RouterLink>
+    <RouterLink to="/" class="footer-buttons">
+      <img src="/src/assets/home1.svg" class="home">
+    </RouterLink>
+    <RouterLink to="/plans" class="footer-buttons">
+      <img src="/src/assets/plans.svg" class="plans">
+    </RouterLink>
+    <RouterLink to="/help" class="footer-buttons">
+      <img src="/src/assets/help.svg" class="help">
+    </RouterLink>
+  </footer>
 </template>
 
-<style>
-html, body {
-  height: 1030px;
+<style scoped>
+html,
+body,
+template {
+  height: 500px;
   margin: 0;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   overflow: hidden;
+}
+
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #26262d;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  border-top: 2px solid white;
+  z-index: 1;
+  position: fixed;
 }
 
 h1 {
@@ -134,34 +167,6 @@ h3 {
   font-weight: normal;
 }
 
-.profile {
-  width: 50px;
-  height: auto;
-  margin-right: 30px;
-  margin-left: 30px;
-}
-
-.home {
-  width: 60px;
-  height: auto;
-  margin-right: 30px;
-  margin-left: 30px;
-}
-
-.plans {
-  width: 50px;
-  height: auto;
-  margin-right: 30px;
-  margin-left: 30px;
-}
-
-.help {
-  width: 40px;
-  height: auto;
-  margin-right: 30px;
-  margin-left: 30px;
-}
-
 .footer-pictures {
   display: flex;
   align-items: center;
@@ -173,17 +178,10 @@ h3 {
   border: none;
 }
 
-.footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #26262d;
-  width: 100%;
-  bottom: 0;
-  padding: 10px 0;
-  border-top: 2px solid white;
-  z-index: 1;
-  position: relative;
+.arrow {
+  width: auto;
+  height: 40px;
+  transform: scaleY(-1);
 }
 
 .today {
@@ -227,19 +225,6 @@ h3 {
   color: white;
   margin-left: 20px;
   margin-right: 20px;
-}
-
-.app {
-  width: 500px;
-  height: 150vh;
-  border: 2px solid black;
-  border-color: black;
-  position: relative;
-  overflow: hidden;
-  background-color: #0D0101;
-  padding-bottom: 50px;
-  display: flex;
-  flex-direction: column;
 }
 
 .arrow {
@@ -315,24 +300,3 @@ h3 {
   transform: translateY(0);
 }
 </style>
-
-<script setup>
-
-calendar_cl = getElementById("Opened")
-calendar_op = getElementById("Closed")
-
-arrows = document.querySelectorAll(".arrow");
-
-for (const element of arrows) {
-  element.addEventListener("click", function () {
-    if (calendar_cl.style.display === "block") {
-      calendar_cl.style.display = "none";
-      calendar_op.style.display = "block";
-    } else {
-      calendar_cl.style.display = "block";
-      calendar_op.style.display = "none";
-    }
-  })
-}
-
-</script>
