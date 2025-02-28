@@ -54,7 +54,7 @@ const route = useRoute()
 
 </template>
 
-<style>
+<style scoped>
 html,
 body {
   height: 100%;
