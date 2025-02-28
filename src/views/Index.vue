@@ -54,7 +54,7 @@ const route = useRoute()
 
 </template>
 
-<style>
+<style scoped>
 html,
 body {
   height: 100%;
@@ -125,7 +125,7 @@ body {
   font-family: Oswald;
   font-size: 20px;
   font-weigth: bold;
-  
+
 }
 
 .lebron {

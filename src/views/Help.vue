@@ -22,7 +22,7 @@
 
 </template>
 
-<style>
+<style scoped>
 html, body {
   height: 1030px;
   margin: 0;
