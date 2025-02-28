@@ -28,6 +28,7 @@ html, body {
   color: white;
   font-family: roboto;
   font-size: 18px;
+  font-weight: bold;
 }
 
 .small-text {
@@ -124,13 +125,9 @@ html, body {
   margin-bottom: 12px;
 }
 
-.mike {
-  margin-bottom: 10px;
-}
 
-.lebron {
-  margin-bottom: 10px;
-}
+
+
 
 .nutrition {
   max-width: 500px;
@@ -233,17 +230,18 @@ html, body {
 }
 
 .start-workout {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #c92f1e;
   width: 250px;
+  height: 50px;
   border-radius: 20px;
-  height: auto;
   margin-top: 60px;
   font-weight: bold;
   margin-bottom: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 
 .start-workout-button {
   display: flex;

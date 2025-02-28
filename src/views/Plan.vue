@@ -44,6 +44,7 @@ html, body {
   color: white;
   font-family: roboto;
   font-size: 18px;
+  font-weight: bold;
 }
 
 .small-text {

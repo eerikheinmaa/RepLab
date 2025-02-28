@@ -1,5 +1,13 @@
 <template>
-  <div id='vsio'>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet">
+  </head>
+
     <div class="profile">
       <div class="profile-top">
         <div class="profile-pic">
@@ -32,7 +40,7 @@
        </div>
     </div>
 
-    <div class="nutrition" id="Closed-Nutrition">
+    <div class="nutrition">
       <div>
         <h2 class="daily-nutrition">DAILY NUTRITON</h2>
       </div>
@@ -50,42 +58,16 @@
         <p class="big-text">START WORKOUT</p>
       </button>
     </div>
-    <div class="nutrition" id="Opened-Nutrition" style="display: none;">
-      <div>
-        <h2 class="daily-nutrition">YOUR NUTRITION TODAY</h2>
-      </div>
-      <div class="nutrition-pictures">
-        <div class="three-pic">
-          <img src="/src/assets/water.svg" class="water">
-          <img src="/src/assets/calories.svg" class="calories">
-          <img src="/src/assets/protein.svg" class="protein">
-        </div>
-        <div class="two-pic">
-          <img src="/src/assets/sugar.svg" class="sugar">
-          <img src="/src/assets/fats.svg" class="fats">
-        </div>
-      </div>
-      <div class="add-meal-container">
-        <button class="meal-button">
-          <p class="big-text">+ Add meal</p>
-        </button>
-        <h2 class="meals-today">MEALS TODAY:</h2>
-        <h3>NONE</h3>
-      </div>
-
-    </div>
-  </div>
 </template>
 
 <style>
 html, body {
   color: black;
   height: 100%;
-  right: 0px;
   margin: 0;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   overflow: hidden;
 }
 
@@ -93,6 +75,7 @@ html, body {
   color: white;
   font-family: roboto;
   font-size: 18px;
+  font-weight: bold;
 }
 
 .small-text {
@@ -162,13 +145,6 @@ li {
   margin-bottom: 12px;
 }
 
-.mike {
-  margin-bottom: 10px;
-}
-
-.lebron {
-  margin-bottom: 10px;
-}
 
 .nutrition {
   max-width: 500px;
@@ -226,17 +202,18 @@ li {
 }
 
 .start-workout {
+  background-color: #c92f1e;
+  width: 250px;
+  height: 50px;
+  border-radius: 20px;
+  margin-top: 60px;
+  font-weight: bold;
+  margin-bottom: 65px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #c92f1e;
-  width: 250px;
-  border-radius: 20px;
-  height: auto;
-  margin-top: 23px;
-  font-weight: bold;
-  margin-bottom: 23px;
 }
+
 
 .start-workout-button {
   display: flex;
@@ -352,35 +329,8 @@ li {
   width: 80px;
 }
 
-.vsio {
-  justify-content: center;
-  position: absolute;
-  margin: 2rem;
-}
+
 
 </style>
 
-<script setup>
-document.addEventListener("DOMContentLoaded", () => {
-
-const nutrition_cl = document.getElementById("Opened-Nutrition");
-const nutrition_op = document.getElementById("Closed-Nutrition");
-
-const buttons = document.querySelectorAll('.open-button');
-console.debug(buttons);
-
-for (const element of buttons) {
-  console.debug("Found buttons");
-  element.addEventListener("click", function () {
-    if (nutrition_cl.style.display === "flex") {
-      nutrition_cl.style.display = "none";
-      nutrition_op.style.display = "flex";
-    } else {
-      nutrition_cl.style.display = "flex";
-      nutrition_op.style.display = "none";
-    }
-  })
-}
-})
-
-</script>
+<script setup></script>

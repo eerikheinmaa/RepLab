@@ -122,6 +122,10 @@ body {
 .mike {
   color: white;
   margin-bottom: 10px;
+  font-family: Oswald;
+  font-size: 20px;
+  font-weigth: bold;
+  
 }
 
 .lebron {
