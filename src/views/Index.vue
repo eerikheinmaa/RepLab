@@ -28,7 +28,7 @@ const route = useRoute()
           <h2 class="lebron">LEBRON SPOTTED AT WENDYS</h2>
           <h3>LEBRON IS A GLIZZY GOBBLER...</h3>
         </div>
-        <p2> class="small-text">READ MORE</p2>
+        <p2 class="small-text">READ MORE</p2>
       </div>
 
       <div class="nutrition">
@@ -67,10 +67,13 @@ body {
   overflow: hidden;
 }
 
+
+
 .big-text {
   color: white;
   font-family: roboto;
   font-size: 18px;
+  font-weight: bold
 }
 
 .small-text {
@@ -191,6 +194,7 @@ body {
   margin-top: 60px;
   font-weight: bold;
   margin-bottom: 65px;
+  heigth: 50px;
 }
 
 .start-workout-button {
@@ -252,6 +256,22 @@ body {
 }
 
 h2 {
+  font-size: 25px;
+  font-family: Oswald;
+  font-weight: bold;
   color: white;
+}
+
+h1 {
+    font-family: Oswald;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 20px;
+    font-family: roboto;
+    color: white;
+    font-weight: normal;
 }
 </style>
