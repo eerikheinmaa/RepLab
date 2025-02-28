@@ -122,9 +122,6 @@ body {
 .mike {
   color: white;
   margin-bottom: 10px;
-  font-family: Oswald;
-  font-size: 20px;
-  font-weigth: bold;
 
 }
 
@@ -263,6 +260,7 @@ h2 {
   font-family: Oswald;
   font-weight: bold;
   color: white;
+  
 }
 
 h1 {
@@ -276,5 +274,6 @@ h3 {
     font-family: roboto;
     color: white;
     font-weight: normal;
+    margin-bottom: 10px;
 }
 </style>
