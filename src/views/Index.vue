@@ -17,39 +17,39 @@ const route = useRoute()
   </head>
 
   <body>
+    <div>
+      <div class="news">
+        <h1 class="greeting"> HELLO, JOHN!</h1>
+        <div class="news1">
+          <h2 class="mike">MIKE TYSON DEAD AT 57</h2>
+          <h3>AFTER YEARS OF FIGHTING MIK...</h3>
+        </div>
+        <div class="news2">
+          <h2 class="lebron">LEBRON SPOTTED AT WENDYS</h2>
+          <h3>LEBRON IS A GLIZZY GOBBLER...</h3>
+        </div>
+        <p2> class="small-text">READ MORE</p2>
+      </div>
 
-    <div class="news">
-      <h1 class="greeting"> HELLO, JOHN!</h1>
-      <div class="news1">
-        <h2 class="mike">MIKE TYSON DEAD AT 57</h2>
-        <h3>AFTER YEARS OF FIGHTING MIK...</h3>
+      <div class="nutrition">
+        <div>
+          <h2 class="daily-nutrition">DAILY NUTRITON</h2>
+        </div>
+        <div class="nutrition-pictures">
+          <img src="/src/assets/water.svg" class="water">
+          <img src="/src/assets/calories.svg" class="calories">
+          <img src="/src/assets/protein.svg" class="protein">
+        </div>
+        <button class="open-button">
+          <p class="big-text">OPEN</p>
+        </button>
       </div>
-      <div class="news2">
-        <h2 class="lebron">LEBRON SPOTTED AT WENDYS</h2>
-        <h3>LEBRON IS A GLIZZY GOBBLER...</h3>
+      <div class="start-workout-button">
+        <button class="start-workout">
+          <p class="big-text">START WORKOUT</p>
+        </button>
       </div>
-      <p2> class="small-text">READ MORE</p2>
     </div>
-
-    <div class="nutrition">
-      <div>
-        <h2 class="daily-nutrition">DAILY NUTRITON</h2>
-      </div>
-      <div class="nutrition-pictures">
-        <img src="/src/assets/water.svg" class="water">
-        <img src="/src/assets/calories.svg" class="calories">
-        <img src="/src/assets/protein.svg" class="protein">
-      </div>
-      <button class="open-button">
-        <p class="big-text">OPEN</p>
-      </button>
-    </div>
-    <div class="start-workout-button">
-      <button class="start-workout">
-        <p class="big-text">START WORKOUT</p>
-      </button>
-    </div>
-
   </body>
 
 </template>

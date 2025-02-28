@@ -2,29 +2,37 @@
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 
-const calendar_cl = document.getElementById("Opened");
-const calendar_op = document.getElementById("Closed");
 
-const arrows = document.querySelectorAll(".arrow");
+document.addEventListener("DOMContentLoaded", () => {
 
-for (const element of arrows) {
-  element.addEventListener("click", function () {
-    if (calendar_cl.style.display === "block") {
-      calendar_cl.style.display = "none";
-      calendar_op.style.display = "block";
-    } else {
-      calendar_cl.style.display = "block";
-      calendar_op.style.display = "none";
-    }
-  })
-}
+  const calendar_cl = document.getElementById("Opened");
+  const calendar_op = document.getElementById("Closed");
+
+  const arrows = document.querySelectorAll('.calender-extension');
+  console.debug(arrows);
+
+  for (const element of arrows) {
+    console.debug("Found arrows");
+    element.addEventListener("click", function () {
+      if (calendar_cl.style.display === "block") {
+        calendar_cl.style.display = "none";
+        calendar_op.style.display = "block";
+      } else {
+        calendar_cl.style.display = "block";
+        calendar_op.style.display = "none";
+      }
+    })
+  }
+});
+
+
 
 </script>
 
 <template>
   <header>
     <div class="calender" id="Closed">
-      <button class="calender-extencion"><img src="/src/assets/arrow.svg" class="arrow"></button>
+      <button class="calender-extension"><img src="/src/assets/arrow.svg" class="arrow"></button>
       <h3 class="calender-text">15.12</h3>
       <h3 class="calender-text">14.12</h3>
       <h3 class="calender-text">13.12</h3>
@@ -99,7 +107,7 @@ for (const element of arrows) {
         </div>
 
       </div>
-      <button class="calender-extencion"><img src="/src/assets/arrow.svg" class="arrow"></button>
+      <button class="calender-extension"><img src="/src/assets/arrow.svg" class="arrow"></button>
     </div>
   </header>
 
@@ -207,7 +215,7 @@ h3 {
   display: none;
 }
 
-.calender-extencion {
+.calender-extension {
   position: absolute;
   right: 0;
   top: 0;
@@ -286,7 +294,7 @@ h3 {
   transform: scaleY(-1);
 }
 
-.calender-extencion {
+.calender-extension {
   height: 50px;
   width: 50px;
   border: none;
@@ -299,4 +307,10 @@ h3 {
   bottom: 5px;
   transform: translateY(0);
 }
+
+#Closed #Opened {
+  position: absolute;
+  z-index: 2;
+}
+
 </style>
