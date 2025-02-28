@@ -355,6 +355,7 @@ li {
 .vsio {
   justify-content: center;
   position: absolute;
+  margin: 2rem;
 }
 
 </style>

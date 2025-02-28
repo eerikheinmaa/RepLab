@@ -57,7 +57,9 @@ const route = useRoute()
 <style>
 html,
 body {
-  height: 1030px;
+  height: 100%;
+  padding-top: 25px;
+  color: white;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -79,7 +81,6 @@ body {
 
 
 
-
 .news {
   display: flex;
   align-items: center;
@@ -88,6 +89,7 @@ body {
 }
 
 .greeting {
+  color: white;
   margin-top: 20px;
   margin-bottom: 25px;
 }
@@ -115,10 +117,12 @@ body {
 }
 
 .mike {
+  color: white;
   margin-bottom: 10px;
 }
 
 .lebron {
+  color: white;
   margin-bottom: 10px;
 }
 
@@ -245,5 +249,9 @@ body {
   border-top: 2px solid white;
   z-index: 1;
   position: relative;
+}
+
+h2 {
+  color: white;
 }
 </style>
