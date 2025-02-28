@@ -1,4 +1,5 @@
 <template>
+  <div id='vsio'>
     <div class="profile">
       <div class="profile-top">
         <div class="profile-pic">
@@ -49,6 +50,7 @@
         <p class="big-text">START WORKOUT</p>
       </button>
     </div>
+  </div>
 </template>
 
 <style>
@@ -326,6 +328,9 @@ li {
   width: 80px;
 }
 
+.vsio {
+  justify-content: center;
+}
 
 </style>
 
