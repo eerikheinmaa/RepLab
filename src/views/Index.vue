@@ -77,88 +77,8 @@ body {
   font-size: 15px;
 }
 
-h1 {
-  color: white;
-  font-family: Oswald;
-  font-size: 25px;
-}
 
-h2 {
-  font-size: 20px;
-  font-family: Oswald;
-  font-weight: bold;
-  color: white;
-}
 
-h3 {
-  font-size: 20px;
-  font-family: roboto;
-  color: white;
-  font-weight: normal;
-}
-
-.app {
-  width: 500px;
-  height: 150vh;
-  border: 2px solid black;
-  border-color: black;
-  position: relative;
-  overflow: hidden;
-  background-color: #0D0101;
-  padding-bottom: 50px;
-  display: flex;
-  flex-direction: column;
-}
-
-.calender {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  width: 100%;
-  height: 50px;
-  overflow-x: auto;
-  white-space: nowrap;
-  scrollbar-width: none;
-  background-color: #0D0101;
-  scroll-behavior: smooth;
-}
-
-.calender::-webkit-scrollbar {
-  display: none;
-}
-
-.arrow {
-  width: auto;
-  height: 40px;
-  position: relative;
-  z-index: 10;
-}
-
-.calender-extencion {
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 50px;
-  width: 50px;
-  border: none;
-  background: #0D0101;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.calender-text {
-  background-color: transparent;
-  color: white;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.today {
-  color: white;
-  font-weight: bold;
-  text-shadow: 0 0 10px white, 0 0 20px white, 0 0 40px white, 0 0 60px white, 0 0 80px white, 0 0 100px white, 0 0 120px white, 0 0 140px white, 0 0 160px white, 0 0 180px white, 0 0 200px white;
-}
 
 .news {
   display: flex;

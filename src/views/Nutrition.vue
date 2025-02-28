@@ -47,38 +47,9 @@ html, body {
   font-size: 15px;
 }
 
-h1 {
-  color: white;
-  font-family: Oswald;
-  font-size: 25px;
-}
 
-h2 {
-  font-size: 20px;
-  font-family: Oswald;
-  font-weight: bold;
-  color: white;
-}
 
-h3 {
-  font-size: 20px;
-  font-family: roboto;
-  color: white;
-  font-weight: normal;
-}
 
-.app {
-  width: 500px;
-  height: 150vh;
-  border: 2px solid black;
-  border-color: black;
-  position: relative;
-  overflow: hidden;
-  background-color: #0D0101;
-  padding-bottom: 50px;
-  display: flex;
-  flex-direction: column;
-}
 
 .calender {
   display: flex;
@@ -289,59 +260,6 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.profile {
-  width: 50px;
-  height: auto;
-  margin-right: 30px;
-  margin-left: 30px;
-}
-
-.home {
-  width: 60px;
-  height: auto;
-  margin-right: 30px;
-  margin-left: 30px;
-}
-
-.plans {
-  width: 50px;
-  height: auto;
-  margin-right: 30px;
-  margin-left: 30px;
-}
-
-.help {
-  width: 40px;
-  height: auto;
-  margin-right: 30px;
-  margin-left: 30px;
-}
-
-.footer-pictures {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer-buttons {
-  background-color: transparent;
-  border: none;
-}
-
-.footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #26262d;
-  width: 100%;
-  bottom: 0;
-  padding: 10px 0;
-  border-top: 2px solid white;
-  z-index: 1;
-  position: relative;
-  margin-top: 75px;
 }
 
 .meals-today {
