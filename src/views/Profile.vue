@@ -88,6 +88,7 @@ h1 {
   color: black;
   font-family: Oswald;
   font-size: 25px;
+  font-weight: bold;
 }
 
 h2 {
@@ -249,7 +250,8 @@ li {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
+  margin-left: 5px;
 }
 
 .profile-name{
@@ -274,11 +276,12 @@ li {
 
 .lebron-name {
   font-family: oswald;
-  font-weight: regular;
+  font-weight: bold;
   font-size: 30px;
   margin-left: 10px;
   margin-top: 5px;
   margin-bottom: 5px;
+  color:black;
 }
 
 .bio-boxes{
