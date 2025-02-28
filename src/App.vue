@@ -134,7 +134,7 @@ html,
 body,
 template {
   height: 100%;
-  width: 50%;
+  width: 0%;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -153,6 +153,45 @@ footer {
   border-top: 2px solid white;
   z-index: 1;
   position: fixed;
+}
+
+.profile {
+  width: 55px;
+  height: auto;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.home {
+  width: 50px;
+  height: auto;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.plans {
+  width: 50px;
+  height: auto;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.help {
+  width: 40px;
+  height: auto;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.footer-pictures {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-buttons {
+  background-color: transparent;
+  border: none;
 }
 
 h1 {
