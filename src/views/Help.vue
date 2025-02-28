@@ -1,4 +1,13 @@
 <template>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet">
+  </head>
+
   <div class="app">
 
     <h1 class="title">IF YOU ARE HAVING A PROBLEM THEN CONTACT US</h1>
