@@ -32,7 +32,7 @@
        </div>
     </div>
 
-    <div class="nutrition">
+    <div class="nutrition" id="Closed-Nutrition">
       <div>
         <h2 class="daily-nutrition">DAILY NUTRITON</h2>
       </div>
@@ -49,6 +49,30 @@
       <button class="start-workout">
         <p class="big-text">START WORKOUT</p>
       </button>
+    </div>
+    <div class="nutrition" id="Opened-Nutrition" style="display: none;">
+      <div>
+        <h2 class="daily-nutrition">YOUR NUTRITION TODAY</h2>
+      </div>
+      <div class="nutrition-pictures">
+        <div class="three-pic">
+          <img src="/src/assets/water.svg" class="water">
+          <img src="/src/assets/calories.svg" class="calories">
+          <img src="/src/assets/protein.svg" class="protein">
+        </div>
+        <div class="two-pic">
+          <img src="/src/assets/sugar.svg" class="sugar">
+          <img src="/src/assets/fats.svg" class="fats">
+        </div>
+      </div>
+      <div class="add-meal-container">
+        <button class="meal-button">
+          <p class="big-text">+ Add meal</p>
+        </button>
+        <h2 class="meals-today">MEALS TODAY:</h2>
+        <h3>NONE</h3>
+      </div>
+
     </div>
   </div>
 </template>
@@ -330,8 +354,32 @@ li {
 
 .vsio {
   justify-content: center;
+  position: absolute;
 }
 
 </style>
 
-<script setup></script>
+<script setup>
+document.addEventListener("DOMContentLoaded", () => {
+
+const nutrition_cl = document.getElementById("Opened-Nutrition");
+const nutrition_op = document.getElementById("Closed-Nutrition");
+
+const buttons = document.querySelectorAll('.open-button');
+console.debug(buttons);
+
+for (const element of buttons) {
+  console.debug("Found buttons");
+  element.addEventListener("click", function () {
+    if (nutrition_cl.style.display === "flex") {
+      nutrition_cl.style.display = "none";
+      nutrition_op.style.display = "flex";
+    } else {
+      nutrition_cl.style.display = "flex";
+      nutrition_op.style.display = "none";
+    }
+  })
+}
+})
+
+</script>

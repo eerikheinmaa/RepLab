@@ -1,28 +1,5 @@
 <template>
-  <div class="nutrition">
-      <div>
-        <h2 class="daily-nutrition">YOUR NUTRITION TODAY</h2>
-      </div>
-      <div class="nutrition-pictures">
-        <div class="three-pic">
-          <img src="assets/water.svg" class="water">
-          <img src="assets/calories.svg" class="calories">
-          <img src="assets/protein.svg" class="protein">
-        </div>
-        <div class="two-pic">
-          <img src="assets/sugar.svg" class="sugar">
-          <img src="assets/fats.svg" class="fats">
-        </div>
-      </div>
-      <div class="add-meal-container">
-        <button class="meal-button">
-          <p class="big-text">+ Add meal</p>
-        </button>
-        <h2 class="meals-today">MEALS TODAY:</h2>
-        <h3>NONE</h3>
-      </div>
-
-    </div>
+  
 </template>
 
 <style>

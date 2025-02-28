@@ -1,14 +1,4 @@
 <template>
-  <router-link to="/help">Got to help</router-link>
-  <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="help.css" rel="stylesheet" type="text/css" />
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-</head>
-
-<body>
   <div class="app">
 
     <h1 class="title">IF YOU ARE HAVING A PROBLEM THEN CONTACT US</h1>
@@ -20,7 +10,6 @@
 
 
   </div>
-</body>
 
 </template>
 
