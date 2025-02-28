@@ -257,7 +257,7 @@ li {
 .profile-name{
   background-color: #d9d9d9;
   height: 150px;
-  width: 55%;
+  width: 56%;
   margin-right: 15px;
   margin-top: 20px;
   overflow: hidden;
