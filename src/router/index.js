@@ -44,7 +44,7 @@ const router = createRouter({
       component: Profile,
     },
     {
-      path: '/plan',
+      path: '/plans',
       name: 'Plan',
       component: Plan,
     },

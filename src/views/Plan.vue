@@ -1,20 +1,20 @@
 <template>
   <div class="plans">
-      <div id="plan1">
+      <div class="plan" id="plan1">
         <h1>Chest + tricep</h1>
         <h2>Estimated time:   1h 30min</h2>
       </div>
-      <div id="plan2">
+      <div class="plan" id="plan2">
         <h1>Hands + shoulders</h1>
         <h2>Estimated time:   1h 45min</h2>
 
       </div>
-      <div id="plan3">
+      <div class="plan" id="plan3">
         <h1>Back</h1>
         <h2>Estimated time:   1h 15min</h2>
 
       </div>
-      <div id="plan4">
+      <div class="plan" id="plan4">
         <h1>Legs</h1>
         <h2>Estimated time:   1h 45min</h2>
       </div>
@@ -186,7 +186,7 @@ h3 {
   margin-top: 95px;
 }
 
-.plan1 {
+.plan {
   width: 410px;
   height: 150px;
   padding: 15px;
