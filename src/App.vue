@@ -14,11 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
   for (const element of arrows) {
     console.debug("Found arrows");
     element.addEventListener("click", function () {
-      if (calendar_cl.style.display === "block") {
+      if (calendar_cl.style.display === "flex") {
         calendar_cl.style.display = "none";
-        calendar_op.style.display = "block";
+        calendar_op.style.display = "flex";
       } else {
-        calendar_cl.style.display = "block";
+        calendar_cl.style.display = "flex";
         calendar_op.style.display = "none";
       }
     })
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <template>
   <header>
     <div class="calender" id="Closed">
-      <button class="calender-extension"><img src="/src/assets/arrow.svg" class="arrow"></button>
+      <button class="calender-extension"><img src="/src/assets/arrow.svg" class="op arrow"></button>
       <h3 class="calender-text">15.12</h3>
       <h3 class="calender-text">14.12</h3>
       <h3 class="calender-text">13.12</h3>
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
 
       </div>
-      <button class="calender-extension"><img src="/src/assets/arrow.svg" class="arrow"></button>
+      <button class="calender-extension"><img src="/src/assets/arrow.svg" class="cl arrow"></button>
     </div>
   </header>
 
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
 html,
 body,
 template {
-  height: 500px;
+  height: 100%;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -211,22 +211,25 @@ h3 {
   scroll-behavior: smooth;
 }
 
+#Opened {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 500px;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  background-color: #26262d;
+  scroll-behavior: smooth;
+  border-bottom: 2px solid white;
+}
+
 .calender::-webkit-scrollbar {
   display: none;
 }
 
-.calender-extension {
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 50px;
-  width: 50px;
-  border: none;
-  background: #0D0101;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 
 .calender-text {
   background-color: transparent;
@@ -294,7 +297,7 @@ h3 {
   transform: scaleY(-1);
 }
 
-.calender-extension {
+.cl {
   height: 50px;
   width: 50px;
   border: none;
@@ -308,9 +311,21 @@ h3 {
   transform: translateY(0);
 }
 
+.op {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 50px;
+  width: 50px;
+  border: none;
+  background: #0D0101;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #Closed #Opened {
   position: absolute;
   z-index: 2;
 }
-
 </style>
