@@ -125,7 +125,7 @@ body {
   font-family: Oswald;
   font-size: 20px;
   font-weigth: bold;
-  
+
 }
 
 .lebron {

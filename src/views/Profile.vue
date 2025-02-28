@@ -60,7 +60,7 @@
     </div>
 </template>
 
-<style>
+<style scoped>
 html, body {
   color: black;
   height: 100%;
