@@ -59,6 +59,12 @@ html, body {
   font-size: 15px;
 }
 
+h2 {
+  font-size: 25px;
+  font-family: Oswald;
+  font-weight: bold;
+  color: white;
+}
 
 
 
@@ -127,9 +133,8 @@ html, body {
 
 
 .nutrition {
-  max-width: 500px;
-  margin-top: 50px;
-  height: 600px;
+  margin-top: 70px;
+  height: 100%;
   border: 2px solid white;
   display: flex;
   justify-content: center;
@@ -178,6 +183,7 @@ html, body {
 
 .daily-nutrition {
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .nutrition-pictures {
@@ -218,8 +224,6 @@ html, body {
 }
 
 .add-meal-container{
-  padding-left: 80px;
-  width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
