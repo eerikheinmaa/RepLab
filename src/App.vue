@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="number-row">
           <div class="days">T</div>
           <div class="numbers">4</div>
-          <div class="numbers">11</div>
+          <div class="numbers today1">11</div>
           <div class="numbers">18</div>
           <div class="numbers">25</div>
           <div class="numbers next-month">1</div>
@@ -238,10 +238,15 @@ h3 {
   text-shadow: 0 0 10px white, 0 0 20px white, 0 0 40px white, 0 0 60px white, 0 0 80px white, 0 0 100px white, 0 0 120px white, 0 0 140px white, 0 0 160px white, 0 0 180px white, 0 0 200px white;
 }
 
+.today1{
+  background-color: #d9d9d9;
+}
+
+
 .calender {
   display: flex;
   align-items: center;
-  position: absolute;
+  position: fixed;
   flex-direction: row;
   top: 0;
   width: 100%;

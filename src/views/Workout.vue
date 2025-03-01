@@ -6,7 +6,7 @@
       <h1 class="top-message">TODAY WE ARE GOING TO HIT BACK</h1>
       <h1 class="muscle-right">💪</h1>
     </div>
-    <!--
+
       <h1>LETS START!!!</h1>
       <div class="exercise">
         <h2 class="exercise-name">1. ROWS 3-10REPS</h2>
@@ -48,7 +48,6 @@
         </div>
       </div>
 
-    -->
 l,l,l
     <div class="plan" :v-if="data">
       <WorkoutItem :v-for="item in data" :title="item.type" :name="item.name"></WorkoutItem>
