@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="numbers">14</div>
           <div class="numbers">21</div>
           <div class="numbers">28</div>
-          <div class="next-month">4</div>
+          <div class="numbers next-month">4</div>
         </div>
 
       </div>
@@ -198,6 +198,7 @@ h1 {
   color: white;
   font-family: Oswald;
   font-size: 25px;
+  margin-top: 5px;
 }
 
 h2 {
@@ -252,21 +253,9 @@ h3 {
   scroll-behavior: smooth;
 }
 
-.calender-extencion {
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 50px;
-  width: 50px;
-  border: none;
-  background: #0D0101;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 
 #Opened {
-  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -277,6 +266,8 @@ h3 {
   background-color: #26262d;
   scroll-behavior: smooth;
   border-bottom: 2px solid white;
+  z-index: 10;
+
 }
 
 .calender::-webkit-scrollbar {
@@ -360,8 +351,8 @@ h3 {
   align-items: center;
   justify-content: flex-end;
   position: absolute;
-  right: 0px;
-  bottom: 5px;
+  right: 5px;
+  bottom: 0px;
   transform: translateY(0);
 }
 

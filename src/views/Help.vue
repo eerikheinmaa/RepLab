@@ -50,10 +50,11 @@ html, body {
 h1 {
   color: white;
   font-family: Oswald;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: normal;
-  margin-left: 40px;
+  margin-left: 35px;
   margin-bottom: 20px;
+  margin-top: 90px;
 }
 
 h2 {

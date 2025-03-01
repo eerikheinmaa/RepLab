@@ -112,39 +112,15 @@ li {
   font-weight: regular;
 }
 
-.news {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
+
 
 .greeting {
   margin-top: 20px;
   margin-bottom: 25px;
 }
 
-.news1 {
-  background-color: #26262d;
-  height: auto;
-  width: 500px;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  margin-bottom: 25px;
-  padding-left: 20px;
-}
 
-.news2 {
-  background-color: #26262d;
-  height: auto;
-  width: 500px;
-  display: flex;
-  align-items: left;
-  flex-direction: column;
-  padding-left: 20px;
-  margin-bottom: 12px;
-}
+
 
 
 .nutrition {
@@ -230,6 +206,10 @@ li {
 .lebron-pic {
   height: 125px;
   width: auto;
+}
+
+.profile{
+  margin-top: 60px;
 }
 
 .profile-pic {

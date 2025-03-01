@@ -89,6 +89,7 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  margin-top: 30px;
 }
 
 .greeting {

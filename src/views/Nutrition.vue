@@ -91,39 +91,14 @@ html, body {
   text-shadow: 0 0 10px white, 0 0 20px white, 0 0 40px white, 0 0 60px white, 0 0 80px white, 0 0 100px white, 0 0 120px white, 0 0 140px white, 0 0 160px white, 0 0 180px white, 0 0 200px white;
 }
 
-.news {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
+
 
 .greeting {
   margin-top: 20px;
   margin-bottom: 25px;
 }
 
-.news1 {
-  background-color: #26262d;
-  height: auto;
-  width: 500px;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  margin-bottom: 25px;
-  padding-left: 20px;
-}
 
-.news2 {
-  background-color: #26262d;
-  height: auto;
-  width: 500px;
-  display: flex;
-  align-items: left;
-  flex-direction: column;
-  padding-left: 20px;
-  margin-bottom: 12px;
-}
 
 
 
