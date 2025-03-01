@@ -5,6 +5,7 @@ import Help from '../views/Help.vue'
 import Profile from '../views/Profile.vue'
 import Plan from '../views/Plan.vue'
 import Nutrition from '@/views/Nutrition.vue'
+import Workout from '@/views/Workout.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -44,6 +45,11 @@ const router = createRouter({
       path: '/nutrition',
       name: 'Nutrition',
       component: Nutrition,
+    },
+    {
+      path: '/workout',
+      name: 'Workout',
+      component: Workout,
     },
   ],
 })

@@ -11,7 +11,7 @@
   <div class="app">
 
     <h1 class="title">IF YOU ARE HAVING A PROBLEM THEN CONTACT US</h1>
-    <div class="map">
+    <div class="map" id="googleMap">
     </div>
     <h2>Contacts:</h2>
     <h3>Email: beast.app@gmail.com</h3>
@@ -23,7 +23,8 @@
 </template>
 
 <style scoped>
-html, body {
+html,
+body {
   height: 1030px;
   margin: 0;
   display: flex;
@@ -77,9 +78,7 @@ h3 {
   margin-bottom: 3px;
 }
 
-
-
-.map{
+.map {
   width: 83%;
   height: 400px;
   margin-left: 40px;
@@ -90,4 +89,32 @@ h3 {
 
 </style>
 
-<script setup></script>
+<script setup>
+import { onMounted } from "vue";
+
+function loadGoogleMaps(callback) {
+  if (window.google && window.google.maps) {
+    callback();
+    return;
+  }
+
+  const script = document.createElement("script");
+  script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyAT67Gn8Y9H25G3Jv0T0u5oz9tIzm_1I50&callback=initMap`;
+  script.async = true;
+  script.defer = true;
+  document.head.appendChild(script);
+
+  window.initMap = callback; // Attach callback to window so Google API can call it
+}
+
+function initMap() {
+  const map = new google.maps.Map(document.getElementById("googleMap"), {
+    center: { lat: 59.4223428, lng: 24.7406476 },
+    zoom: 5,
+  });
+}
+
+onMounted(() => {
+  loadGoogleMaps(initMap);
+});
+</script>

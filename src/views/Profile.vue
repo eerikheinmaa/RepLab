@@ -53,11 +53,11 @@
           <button class="open-button"><p class="big-text">OPEN</p></button>
       </RouterLink>
     </div>
-    <div class="start-workout-button">
+    <RouterLink to="/workout" class="start-workout-button">
       <button class="start-workout">
         <p class="big-text">START WORKOUT</p>
       </button>
-    </div>
+    </RouterLink>
 </template>
 
 <style scoped>
