@@ -3,19 +3,21 @@
   <div class="exercise">
     <h2 class="exercise-name">{{ name }}</h2>
     <div class="images">
-      <img src="/src/assets/no.png" class="no choice-buttons">
-      <img src="/src/assets/yes.png" class="no choice-buttons">
-
-      <script>
-        const buttons = 
-
-        index
-      </script>
+      <div class="buttons" style="display: flex;">
+        <img src="/src/assets/no.png" class="no choice-buttons nb" @click="handleClick('no')" >
+        <img src="/src/assets/yes.png" class="no choice-buttons yb" @click="handleClick('yes')">
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
+
+.buttons * {
+  filter: grayscale(80%);
+  cursor: pointer;
+  transition: filter 0.3s;
+}
 
 h1 {
   color: white;
@@ -69,6 +71,8 @@ h2 {
 </style>
 
 <script setup>
+import { ref } from "vue";
+
 defineProps({
   title: {
     type: String,
@@ -83,4 +87,17 @@ defineProps({
     required: true,
   },
 })
+
+const selected = ref(null);
+const counted = ref(false);
+
+const handleClick = (choice) => {
+    selected.value = choice;
+
+    if (!counted.value) {
+        counted.value = true;
+        //emit("incrementCounter");
+    }
+};
+
 </script>
