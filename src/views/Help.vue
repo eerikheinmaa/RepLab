@@ -112,33 +112,4 @@ onMounted(() => {
   document.head.appendChild(script);
 });
 
-/*import { onMounted } from "vue";
-
-function loadGoogleMaps(callback) {
-  if (window.google && window.google.maps) {
-    callback();
-    return;
-  }
-
-  const script = document.createElement("script");
-  script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyAT67Gn8Y9H25G3Jv0T0u5oz9tIzm_1I50&callback=initMap`;
-  script.async = true;
-  script.defer = true;
-  document.head.appendChild(script);
-
-  window.initMap = callback; // Attach callback to window so Google API can call it
-}
-
-function initMap() {
-  const map = new google.maps.Map(document.getElementById("googleMap"), {
-    center: { lat: 59.4223428, lng: 24.7406476 },
-    zoom: 5,
-  });
-}
-
-onMounted(() => {
-  loadGoogleMaps(initMap);
-});
-
-*/
 </script>
