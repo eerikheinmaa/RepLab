@@ -246,7 +246,7 @@ h3 {
 .calender {
   display: flex;
   align-items: center;
-  position: fixed;
+  position: absolute;
   flex-direction: row;
   top: 0;
   width: 100%;
