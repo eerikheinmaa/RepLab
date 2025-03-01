@@ -3,8 +3,14 @@
   <div class="exercise">
     <h2 class="exercise-name">{{ name }}</h2>
     <div class="images">
-      <button class="choice-buttons"><img src="/src/assets/no.png" class="no"></button>
-      <button class="choice-buttons"><img src="/src/assets/yes.png" class="no"></button>
+      <img src="/src/assets/no.png" class="no choice-buttons">
+      <img src="/src/assets/yes.png" class="no choice-buttons">
+
+      <script>
+        const buttons = 
+
+        index
+      </script>
     </div>
   </div>
 </template>
@@ -70,6 +76,10 @@ defineProps({
   },
   name: {
     type: String,
+    required: true,
+  },
+  index: {
+    type: Number,
     required: true,
   },
 })
