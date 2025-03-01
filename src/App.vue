@@ -230,6 +230,7 @@ h3 {
   width: auto;
   height: 40px;
   transform: scaleY(-1);
+  z-index: 12;
 }
 
 .today {
@@ -244,7 +245,7 @@ h3 {
 .calender {
   display: flex;
   align-items: center;
-  position: absolute;
+  position: fixed;
   flex-direction: row;
   top: 0;
   width: 100%;
@@ -254,6 +255,7 @@ h3 {
   scrollbar-width: none;
   background-color: #0D0101;
   scroll-behavior: smooth;
+  z-index: 10;
 }
 
 
