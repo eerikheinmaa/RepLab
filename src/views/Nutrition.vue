@@ -237,7 +237,7 @@ h2 {
   border-radius: 20px;
   margin-top: 60px;
   font-weight: bold;
-  margin-bottom: 65px;
+  margin-bottom: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
