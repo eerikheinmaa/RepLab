@@ -40,9 +40,11 @@ const route = useRoute()
           <img src="/src/assets/calories.svg" class="calories">
           <img src="/src/assets/protein.svg" class="protein">
         </div>
-        <button class="open-button">
-          <p class="big-text">OPEN</p>
-        </button>
+        <RouterLink to="/nutrition">
+          <button class="open-button"><p class="big-text">OPEN</p></button>
+        </RouterLink>
+          
+        
       </div>
       <div class="start-workout-button">
         <button class="start-workout">

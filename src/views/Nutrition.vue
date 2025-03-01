@@ -8,13 +8,35 @@
       rel="stylesheet">
   </head>
 
+  <div class="nutrition">
+      <div>
+        <h2 class="daily-nutrition">YOUR NUTRITION TODAY</h2>
+      </div>
+      <div class="nutrition-pictures"> 
+        <div class="three-pic">
+          <img src="/src/assets/water.svg" class="water">
+          <img src="/src/assets/calories.svg" class="calories">
+          <img src="/src/assets/protein.svg" class="protein">
+        </div>
+        <div class="two-pic">
+          <img src="/src/assets/sugar.svg" class="sugar">
+          <img src="/src/assets/fats.svg" class="fats">
+        </div>
+      </div>
+      <div class="add-meal-container">
+        <button class="meal-button">
+          <p class="big-text">UPDATE</p>
+        </button>
+      </div>
+
+    </div>
 
 
 
 
 </template>
 
-<style>
+<style scoped>
 html, body {
   height: 1030px;
   margin: 0;
@@ -200,8 +222,8 @@ html, body {
   width: 500px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 
 .start-workout {
