@@ -6,6 +6,8 @@ import Profile from '../views/Profile.vue'
 import Plan from '../views/Plan.vue'
 import Nutrition from '@/views/Nutrition.vue'
 import Workout from '@/views/Workout.vue'
+import Test from '@/views/Test.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -50,6 +52,11 @@ const router = createRouter({
       path: '/workout',
       name: 'Workout',
       component: Workout,
+    },
+    {
+      path: '/Test',
+      name: 'Test',
+      component: Test,
     },
   ],
 })
