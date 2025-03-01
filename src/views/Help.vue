@@ -6,12 +6,13 @@
     <title>Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
   </head>
 
   <div class="app">
 
     <h1 class="title">IF YOU ARE HAVING A PROBLEM THEN CONTACT US</h1>
-    <div class="map" id="googleMap">
+    <div id="map">
     </div>
     <h2>Contacts:</h2>
     <h3>Email: beast.app@gmail.com</h3>
@@ -78,7 +79,7 @@ h3 {
   margin-bottom: 3px;
 }
 
-.map {
+#map {
   width: 83%;
   height: 400px;
   margin-left: 40px;
@@ -87,34 +88,28 @@ h3 {
   margin-bottom: 40px;
 }
 
+
 </style>
+
 
 <script setup>
 import { onMounted } from "vue";
 
-function loadGoogleMaps(callback) {
-  if (window.google && window.google.maps) {
-    callback();
-    return;
-  }
-
-  const script = document.createElement("script");
-  script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyAT67Gn8Y9H25G3Jv0T0u5oz9tIzm_1I50&callback=initMap`;
-  script.async = true;
-  script.defer = true;
-  document.head.appendChild(script);
-
-  window.initMap = callback; // Attach callback to window so Google API can call it
-}
-
-function initMap() {
-  const map = new google.maps.Map(document.getElementById("googleMap"), {
-    center: { lat: 59.4223428, lng: 24.7406476 },
-    zoom: 5,
-  });
-}
-
 onMounted(() => {
-  loadGoogleMaps(initMap);
+  const script = document.createElement("script");
+  script.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
+  script.async = true;
+  script.onload = () => {
+    setTimeout(() => {
+      var map = L.map('map').setView([59.422441040621614, 24.743238628835822], 16);
+      var marker = L.marker([59.422441040621614, 24.743238628835822]).addTo(map);
+      marker.bindPopup("<b>We are here!</b><br>Pärnu mnt 71/73").openPopup();
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+      }).addTo(map);
+    }, 500);
+  };
+  document.head.appendChild(script);
 });
+
 </script>

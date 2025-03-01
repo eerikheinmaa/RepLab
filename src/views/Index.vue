@@ -134,7 +134,6 @@ body {
 }
 
 .nutrition {
-  max-width: 500px;
   margin-top: 50px;
   border: 2px solid white;
   display: flex;

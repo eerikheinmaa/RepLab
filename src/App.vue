@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="number-row">
           <div class="days">T</div>
           <div class="numbers">4</div>
-          <div class="numbers">11</div>
+          <div class="numbers1">11</div>
           <div class="numbers">18</div>
           <div class="numbers">25</div>
           <div class="numbers next-month">1</div>
@@ -238,6 +238,9 @@ h3 {
   text-shadow: 0 0 10px white, 0 0 20px white, 0 0 40px white, 0 0 60px white, 0 0 80px white, 0 0 100px white, 0 0 120px white, 0 0 140px white, 0 0 160px white, 0 0 180px white, 0 0 200px white;
 }
 
+
+
+
 .calender {
   display: flex;
   align-items: center;
@@ -311,6 +314,18 @@ h3 {
   margin-left: 15px;
   margin-right: 15px;
   text-shadow: 8px 4px 4px #18152b;
+}
+
+.numbers1 {
+  width: 100%;
+  font-size: 40px;
+  font-family: Oswald;
+  font-weight: normal;
+  color: white;
+  text-align: center;
+  text-shadow: 8px 4px 4px #18152b;
+  border-radius: 50%;
+  background-color: #43454D;
 }
 
 .days {
