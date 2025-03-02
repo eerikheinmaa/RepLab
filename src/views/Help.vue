@@ -86,6 +86,7 @@ h3 {
   margin-right: 30px;
   border: 2px solid white;
   margin-bottom: 40px;
+  z-index: 1;
 }
 
 
