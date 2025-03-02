@@ -8,8 +8,9 @@
       rel="stylesheet">
   </head>
 
-  <div class="plans">
-      <div class="plan" id="plan1">
+  <div class="plans" v-if="data">
+    <PlanItem v-for="item in data" :name="item.name" :index="item.exercises"></PlanItem>
+    <!--<div class="plan" id="plan1">
         <h1>Chest + tricep</h1>
         <h2>Estimated time:   1h 30min</h2>
       </div>
@@ -26,12 +27,13 @@
       <div class="plan" id="plan4">
         <h1>Legs</h1>
         <h2>Estimated time:   1h 45min</h2>
-      </div>
-    </div>
+      </div>-->
+  </div>
 </template>
 
 <style scoped>
-html, body {
+html,
+body {
   height: 1030px;
   margin: 0;
   display: flex;
@@ -86,7 +88,7 @@ h3 {
   border-radius: 30px;
 }
 
-.plans{
+.plans {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -96,4 +98,19 @@ h3 {
 }
 </style>
 
-<script setup></script>
+<script setup>
+import { ref, onMounted } from 'vue';
+import PlanItem from '@/components/PlanItem.vue';
+
+const data = ref([]);
+
+async function Fetch_Items() {
+  return [{ "name": "Bench Press", "reps": "8-12 Reps", "Time": 10 }];
+}
+
+onMounted(async () => {
+  data.value = await Fetch_Items();
+  console.log("Fetched data:", data.value);
+});
+
+</script>

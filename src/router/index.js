@@ -5,7 +5,7 @@ import Help from '../views/Help.vue'
 import Profile from '../views/Profile.vue'
 import Plan from '../views/Plan.vue'
 import Nutrition from '@/views/Nutrition.vue'
-import Workout from '@/views/Workout.vue'
+import Workout from '@/views/WorkoutView.vue'
 import Test from '@/views/Test.vue'
 
 

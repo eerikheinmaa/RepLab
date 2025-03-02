@@ -1,10 +1,10 @@
 <template>
-  <h1>{{ title }}</h1>
+  <h1>{{ GenerateTitle(index, title) }}</h1>
   <div class="exercise">
     <h2 class="exercise-name">{{ name }}</h2>
     <div class="images">
       <div class="buttons" style="display: flex;">
-        <img src="/src/assets/no.png" class="no choice-buttons nb" @click="handleClick('no')" >
+        <img src="/src/assets/no.png" class="no choice-buttons nb" @click="handleClick('no')">
         <img src="/src/assets/yes.png" class="no choice-buttons yb" @click="handleClick('yes')">
       </div>
     </div>
@@ -12,7 +12,6 @@
 </template>
 
 <style scoped>
-
 .buttons * {
   filter: grayscale(80%);
   cursor: pointer;
@@ -73,6 +72,8 @@ h2 {
 <script setup>
 import { ref } from "vue";
 
+const emit = defineEmits(['incrementCounter'])
+
 defineProps({
   title: {
     type: String,
@@ -92,12 +93,50 @@ const selected = ref(null);
 const counted = ref(false);
 
 const handleClick = (choice) => {
-    selected.value = choice;
+  selected.value = choice;
 
-    if (!counted.value) {
-        counted.value = true;
-        //emit("incrementCounter");
-    }
+  if (!counted.value) {
+    console.log("gay");
+    counted.value = true;
+    emit("incrementCounter");
+  }
 };
+
+const Motivations = {
+  beginning: [
+    "LETS START!!!",
+    "We're going to DESTROY this equipment!",
+    "Every Marathon starts with a single step!! YOU CAN DO IT",
+    "Time to CRUSH it!",
+    "No excuses, just RESULTS!",
+    "This is where champions are made!",
+    "Commit now, thank yourself later!",
+    "Activate BEAST MODE!"
+  ],
+  middle: [
+    "KEEP ON WORKING!!",
+    "DON'T STOP!",
+    "YOU ARE ON FIRE",
+    "No pain, no gain!",
+    "Push past your limits!",
+    "You’re stronger than you think!",
+    "Make sweat your victory!",
+    "This is where progress happens!"
+  ],
+  end: [
+    "FINAL PUSH!!!",
+    "ONE MORE EXERCISE",
+    "YOUR MUSCLES ARE THE PINNACLE OF DISCIPLINE",
+    "Almost there—give it EVERYTHING!",
+    "The finish line is RIGHT THERE!",
+    "One last push for GLORY!",
+    "Your future self is cheering for you!",
+    "End STRONG, finish LIKE A CHAMP!"
+  ]
+};
+function GenerateTitle(index, max_index) {
+  let category = index === 0 ? "beginning" : index === max_index - 1 ? "end" : "middle";
+  return Motivations[category][Math.floor(Math.random() * Motivations[category].length)];
+}
 
 </script>
