@@ -24,12 +24,12 @@
       </div>
     </div>
     <div class="add-meal-container">
-      <button class="meal-button">
+      <button class="meal-button" @click="toggleBox">
         <p class="big-text">Update</p>
       </button>
     </div>
 
-    <div class="box" id="closed">
+    <div class="box" v-show="isBoxOpen">
       <h1>GATEGORY</h1>
       <div>
         <select hidden class="choice-item">
@@ -45,7 +45,7 @@
 
     </input>
       <div class="button">
-        <button>APPLY</button>
+        <button @click="toggleBox">APPLY</button>
       </div>
     </div>
 
@@ -319,4 +319,14 @@ select {
 
 </style>
 
-<script setup></script>
+<script setup>
+
+import { ref } from "vue";
+
+const isBoxOpen = ref(false);
+
+const toggleBox = () => {
+  isBoxOpen.value = !isBoxOpen.value;
+};
+
+</script>
