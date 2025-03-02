@@ -9,7 +9,7 @@
   </head>
 
   <div class="plans" v-if="data">
-    <PlanItem v-for="item in data" :name="item.name" :index="item.exercises"></PlanItem>
+    <PlanItem :key="`neutrition-item-${index}`" v-for="(item, index) in data" :day="item.name" :exercises="item.exercises"></PlanItem>
     <!--<div class="plan" id="plan1">
         <h1>Chest + tricep</h1>
         <h2>Estimated time:   1h 30min</h2>
@@ -79,14 +79,6 @@ h3 {
 }
 
 
-.plan {
-  width: 410px;
-  height: 150px;
-  padding: 15px;
-  margin-top: 20px;
-  background-color: #d9d9d9;
-  border-radius: 30px;
-}
 
 .plans {
   display: flex;
@@ -105,7 +97,7 @@ import PlanItem from '@/components/PlanItem.vue';
 const data = ref([]);
 
 async function Fetch_Items() {
-  return [{ "name": "Bench Press", "reps": "8-12 Reps", "Time": 10 }];
+  return [{ "name": "Chest Day", "exercises":[{"name":"Bench Press", "reps": "8-12 Reps", "time": 10 },{"name":"Bench Press", "reps": "8-12 Reps", "time": 10 },{"name":"Bench Press", "reps": "8-12 Reps", "time": 10 },]},];
 }
 
 onMounted(async () => {
