@@ -45,9 +45,9 @@
         <h2 class="daily-nutrition">DAILY NUTRITON</h2>
       </div>
       <div class="nutrition-pictures">
-          <img src="/src/assets/water.svg" class="water">
-          <img src="/src/assets/calories.svg" class="calories">
-          <img src="/src/assets/protein.svg" class="protein">
+          <img src="/src/assets/water (2).svg" class="water">
+          <img src="/src/assets/calories (2).svg" class="calories">
+          <img src="/src/assets/protein (2).svg" class="protein">
       </div>
       <RouterLink to="/nutrition">
           <button class="open-button"><p class="big-text">OPEN</p></button>
@@ -163,6 +163,7 @@ li {
 
 .nutrition-pictures {
   margin-bottom: 20px;
+  padding-top: 10px;
 }
 
 .open-button {

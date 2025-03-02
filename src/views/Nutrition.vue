@@ -14,15 +14,46 @@
     </div>
     <div class="nutrition-pictures">
       <div class="three-pic">
-        <img src="/src/assets/water.svg" class="water">
-        <img src="/src/assets/calories.svg" class="calories">
-        <img src="/src/assets/protein.svg" class="protein">
+        <div class="image-cont">
+          <img src="/src/assets/water (2).svg" class="water" />
+          <div class="text-cont">
+            <h4>{{ nutritionValues.water }}</h4>
+            <h4>/3000ml</h4>
+          </div>
+        </div>
+        <div class="image-cont">
+          <img src="/src/assets/calories (2).svg" class="calories" />
+          <div class="text-cont">
+            <h4>{{ nutritionValues.calories }}</h4>
+            <h4>/2000cal</h4>
+          </div>
+        </div>
+        <div class="image-cont">
+          <img src="/src/assets/protein (2).svg" class="protein" />
+          <div class="text-cont">
+            <h4>{{ nutritionValues.protein }}</h4>
+            <h4>/90g</h4>
+          </div>
+        </div>
       </div>
       <div class="two-pic">
-        <img src="/src/assets/sugar.svg" class="sugar">
-        <img src="/src/assets/fats.svg" class="fats">
+        <div class="image-cont">
+          <img src="/src/assets/sugar (2).svg" class="sugar" />
+          <div class="text-cont">
+            <h4>{{ nutritionValues.sugar }}</h4>
+            <h4>/25g</h4>
+          </div>
+        </div>
+        <div class="image-cont">
+          <img src="/src/assets/fats (2).svg" class="fats" />
+          <div class="text-cont">
+            <h4>{{ nutritionValues.fats }}</h4>
+            <h4>/78g</h4>
+          </div>
+        </div>
       </div>
     </div>
+
     <div class="add-meal-container">
       <button class="meal-button" @click="toggleBox">
         <p class="big-text">Update</p>
@@ -30,26 +61,25 @@
     </div>
 
     <div class="box" v-show="isBoxOpen">
-      <h1>GATEGORY</h1>
+      <h1>CATEGORY</h1>
       <div>
-        <select hidden class="choice-item">
-          <option>Water</option>
-          <option>Calories</option>
-          <option>Fats</option>
-          <option>Sugar</option>
-          <option>Protein</option>
+        <select v-model="selectedCategory" class="choice-item">
+          <option value="water">Water</option>
+          <option value="calories">Calories</option>
+          <option value="fats">Fats</option>
+          <option value="sugar">Sugar</option>
+          <option value="protein">Protein</option>
         </select>
-        </div>
+      </div>
       <h1>NUMBER</h1>
-      <input class="input" required placeholder="Insert your new number here..." type="Number">
+      <input v-model="newValue" class="input" required placeholder="Insert your new number here..." type="number" />
 
-    </input>
       <div class="button">
-        <button @click="toggleBox">APPLY</button>
+        <button @click="handleApply">APPLY</button>
       </div>
     </div>
-
   </div>
+
 </template>
 
 <style scoped>
@@ -65,6 +95,18 @@ h2 {
   font-family: Oswald;
   font-weight: bold;
   color: white;
+}
+
+h4{
+  font-size: 20px;
+  font-family: roboto;
+  font-weight: bold;
+  color: white;
+}
+
+.text-cont{
+  display: flex;
+  flex-direction: row;
 }
 
 .nutrition {
@@ -163,6 +205,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
 }
 
 .start-workout {
@@ -307,26 +350,51 @@ h2 {
   z-index: 10;
 }
 
+.image-cont{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 select {
   display: flex;
-  font-size: 30px;
+  font-size: 25px;
   border: 4px solid black;
   width: fit-content;
   height: 50px;
   align-items: center;
-  padding-top: 3px;
+  padding-top: 5px;
 }
 
 </style>
 
 <script setup>
-
 import { ref } from "vue";
 
 const isBoxOpen = ref(false);
+const selectedCategory = ref("water"); // Default category
+const newValue = ref(""); // Holds the user input value
+
+// Store the nutrition values dynamically
+const nutritionValues = ref({
+  water: 0,
+  calories: 0,
+  fats: 0,
+  sugar: 0,
+  protein: 0,
+});
 
 const toggleBox = () => {
   isBoxOpen.value = !isBoxOpen.value;
 };
 
+// Update the correct nutrition value
+const handleApply = () => {
+  if (newValue.value !== "" && !isNaN(newValue.value)) {
+    nutritionValues.value[selectedCategory.value] = Number(newValue.value);
+  }
+  newValue.value = ""; // Reset input
+  toggleBox(); // Close the box
+};
 </script>
