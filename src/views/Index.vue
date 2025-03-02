@@ -47,9 +47,11 @@ const route = useRoute()
         
       </div>
       <div class="start-workout-button">
-        <button class="start-workout">
-          <p class="big-text">START WORKOUT</p>
-        </button>
+        <RouterLink to="/workout" class="start-workout-button">
+      <button class="start-workout">
+        <p class="big-text">START WORKOUT</p>
+      </button>
+    </RouterLink>
       </div>
     </div>
   </body>
