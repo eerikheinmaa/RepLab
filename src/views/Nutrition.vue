@@ -1,5 +1,5 @@
 <template>
-  
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -9,54 +9,55 @@
   </head>
 
   <div class="nutrition">
-      <div>
-        <h2 class="daily-nutrition">YOUR NUTRITION TODAY</h2>
+    <div>
+      <h2 class="daily-nutrition">YOUR NUTRITION TODAY</h2>
+    </div>
+    <div class="nutrition-pictures">
+      <div class="three-pic">
+        <img src="/src/assets/water.svg" class="water">
+        <img src="/src/assets/calories.svg" class="calories">
+        <img src="/src/assets/protein.svg" class="protein">
       </div>
-      <div class="nutrition-pictures"> 
-        <div class="three-pic">
-          <img src="/src/assets/water.svg" class="water">
-          <img src="/src/assets/calories.svg" class="calories">
-          <img src="/src/assets/protein.svg" class="protein">
-        </div>
-        <div class="two-pic">
-          <img src="/src/assets/sugar.svg" class="sugar">
-          <img src="/src/assets/fats.svg" class="fats">
-        </div>
+      <div class="two-pic">
+        <img src="/src/assets/sugar.svg" class="sugar">
+        <img src="/src/assets/fats.svg" class="fats">
       </div>
-      <div class="add-meal-container">
-        <button class="meal-button">
-          <p class="big-text">UPDATE</p>
-        </button>
-      </div>
-
+    </div>
+    <div class="add-meal-container">
+      <button class="meal-button">
+        <p class="big-text">Update</p>
+      </button>
     </div>
 
+    <div class="box" id="closed">
+      <h1>GATEGORY</h1>
+      <div>
+        <select hidden class="choice-item">
+          <option>Water</option>
+          <option>Calories</option>
+          <option>Fats</option>
+          <option>Sugar</option>
+          <option>Protein</option>
+        </select>
+        </div>
+      <h1>NUMBER</h1>
+      <input class="input" required placeholder="Insert your new number here..." type="Number">
 
+    </input>
+      <div class="button">
+        <button>APPLY</button>
+      </div>
+    </div>
 
-
+  </div>
 </template>
 
 <style scoped>
-html, body {
-  height: 1030px;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  overflow: hidden;
-}
-
 .big-text {
   color: white;
   font-family: roboto;
   font-size: 18px;
   font-weight: bold;
-}
-
-.small-text {
-  color: white;
-  font-family: roboto;
-  font-size: 15px;
 }
 
 h2 {
@@ -65,72 +66,6 @@ h2 {
   font-weight: bold;
   color: white;
 }
-
-
-
-
-.calender {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  width: 100%;
-  height: 50px;
-  overflow-x: auto;
-  white-space: nowrap;
-  scrollbar-width: none;
-  background-color: #0D0101;
-  scroll-behavior: smooth;
-}
-
-.calender::-webkit-scrollbar {
-  display: none;
-}
-
-.arrow {
-  width: auto;
-  height: 40px;
-  position: relative;
-  z-index: 10;
-}
-
-.calender-extencion {
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 50px;
-  width: 50px;
-  border: none;
-  background: #0D0101;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.calender-text {
-  background-color: transparent;
-  color: white;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.today {
-  color: white;
-  font-weight: bold;
-  text-shadow: 0 0 10px white, 0 0 20px white, 0 0 40px white, 0 0 60px white, 0 0 80px white, 0 0 100px white, 0 0 120px white, 0 0 140px white, 0 0 160px white, 0 0 180px white, 0 0 200px white;
-}
-
-
-
-.greeting {
-  margin-top: 20px;
-  margin-bottom: 25px;
-}
-
-
-
-
-
-
 
 .nutrition {
   margin-top: 70px;
@@ -195,14 +130,14 @@ h2 {
   align-items: center;
 }
 
-.three-pic{
+.three-pic {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-.two-pic{
+.two-pic {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -223,7 +158,7 @@ h2 {
   font-weight: bold;
 }
 
-.add-meal-container{
+.add-meal-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -253,6 +188,135 @@ h2 {
 .meals-today {
   margin-bottom: 3px;
 }
+
+.box{
+  width: 460px;
+  height: fit-content;
+  padding: 20px;
+  background-color: #d9d9d9;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+
+}
+
+.box h2 {
+  color: black;
+  font-family: roboto;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.box h1 {
+  color: black;
+  font-family: roboto;
+  font-size: 20px;
+  letter-spacing: 5px;
+}
+
+.box h3 {
+  color: #8E8585;
+  font-family: roboto;
+  font-size: 20px;
+  letter-spacing: 5px;
+  font-weight: normal;
+}
+
+.box .circle{
+  width: fit-content;
+  height: fit-content;
+  border-radius: 50%;
+  border: 15px solid white;
+}
+
+.box button{
+  width: 100px;
+  height: 50px;
+  background-color: white;
+  font-family: roboto;
+  border: 4px solid black;
+  font-size: 20px;
+  color: black;
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+
+.box .choice {
+  border: 4px solid black;
+  width: fit-content;
+  height: 50px;
+  display: flex;
+  overflow: hidden;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+  font-size: xx-large;
+  background-color: white;
+}
+
+.box .choice2 {
+  border: 4px solid black;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  overflow: hidden;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+.box .choice-item{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.box .arrow {
+  margin-left: 10px;
+  width: auto;
+  height: 40px;
+  color: black;
+}
+
+.box .input{
+  border: 4px solid black;
+  width: 95%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  font-size: x-large;
+  background-color: white;
+}
+
+.box .button{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.box #Opened {
+  z-index: 10;
+}
+
+select {
+  display: flex;
+  font-size: 30px;
+  border: 4px solid black;
+  width: fit-content;
+  height: 50px;
+  align-items: center;
+  padding-top: 3px;
+}
+
 </style>
 
 <script setup></script>
