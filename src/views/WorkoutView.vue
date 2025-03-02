@@ -7,11 +7,14 @@
       <h1 class="muscle-right">💪</h1>
     </div>
     <div class="plan" v-if="data">
-      <WorkoutItem v-for="(item, index) in data" :title="GenerateTitle(index, data.length)" :name="item" :index="index "></WorkoutItem>
+      <WorkoutItem :key="`workout-item-${index}`" v-for="(item, index) in data" :title="data.length" :name="item"
+        :index="index" @increment-counter="Update_Progress()">
+      </WorkoutItem>
     </div>
     <div class="progress">
       <h4>P R O G R E S S</h4>
       <div class="progress-bar">
+        <div id="green-bar" :style="{'width': progress_percent + '%'}"></div>
       </div>
     </div>
   </div>
@@ -34,6 +37,13 @@ h4 {
   letter-spacing: 5px;
 }
 
+#green-bar {
+  width: 0%;
+  transition: 2s;
+  position: absolute;
+  background-color: rgb(66, 174, 66);
+  height: 100%;
+}
 
 .thing {
   padding-top: 40px;
@@ -90,12 +100,14 @@ h4 {
 }
 
 .progress-bar {
+  position: relative;
   width: 460px;
   height: 40px;
   border: 4px solid #d9d9d9;
   border-radius: 10px;
   margin-bottom: 30px;
   margin-top: -5px;
+  overflow-x: hidden;
 }
 </style>
 
@@ -103,52 +115,32 @@ h4 {
 import { ref, onMounted } from 'vue';
 import WorkoutItem from '@/components/WorkoutItem.vue';
 
-const data = ref([]);
 
-const Motivations = {
-  beginning: [
-    "LETS START!!!",
-    "We're going to DESTROY this equipment!",
-    "Every Marathon starts with a single step!! YOU CAN DO IT",
-    "Time to CRUSH it!",
-    "No excuses, just RESULTS!",
-    "This is where champions are made!",
-    "Commit now, thank yourself later!",
-    "Activate BEAST MODE!"
-  ],
-  middle: [
-    "KEEP ON WORKING!!",
-    "DON'T STOP!",
-    "YOU ARE ON FIRE",
-    "No pain, no gain!",
-    "Push past your limits!",
-    "You’re stronger than you think!",
-    "Make sweat your victory!",
-    "This is where progress happens!"
-  ],
-  end: [
-    "FINAL PUSH!!!",
-    "ONE MORE EXERCISE",
-    "YOUR MUSCLES ARE THE PINNACLE OF DISCIPLINE",
-    "Almost there—give it EVERYTHING!",
-    "The finish line is RIGHT THERE!",
-    "One last push for GLORY!",
-    "Your future self is cheering for you!",
-    "End STRONG, finish LIKE A CHAMP!"
-  ]
-};
+const data = ref([]);
 
 async function Fetch_Items() {
   return ["RepStart", "RepEnd"];
 }
 
-function GenerateTitle(index, max_index) {
-  let category = index === 0 ? "beginning" : index === max_index - 1 ? "end" : "middle";
-  return Motivations[category][Math.floor(Math.random() * Motivations[category].length)];
+
+
+let max_index = 1;
+let progress = 0;
+const progress_percent = ref([]);
+
+function Update_Progress() {
+  progress++;
+  max_index
+  progress_percent.value = progress / max_index * 100;
+  console.log(progress_percent.value);
+  if (progress_percent.value == 100) {
+
+  }
 }
 
 onMounted(async () => {
   data.value = await Fetch_Items();
+  max_index = data.value.length
   console.log("Fetched data:", data.value);
 });
 </script>
