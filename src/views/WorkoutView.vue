@@ -8,13 +8,15 @@
     </div>
     <div class="plan" v-if="data">
       <WorkoutItem :key="`workout-item-${index}`" v-for="(item, index) in data" :title="data.length" :name="item"
-        :index="index" @increment-counter="Update_Progress()">
+        :index="index" @increment-counter="(n) => Update_Progress(true, n)"
+        @decrease-counter="(n) => Update_Progress(false, n)">
       </WorkoutItem>
     </div>
     <div class="progress">
       <h4>P R O G R E S S</h4>
       <div class="progress-bar">
-        <div id="green-bar" :style="{'width': progress_percent + '%'}"></div>
+        <div id="green-bar" :style="{ 'width': progress_percent + '%' }"></div>
+        <div id="red-bar" :style="{ 'width': -anti_progress_percent + '%' }"></div>
       </div>
     </div>
   </div>
@@ -43,6 +45,21 @@ h4 {
   position: absolute;
   background-color: rgb(66, 174, 66);
   height: 100%;
+}
+
+#red-bar {
+  position: absolute;
+  rotate: 180deg;
+  right: 0px;
+  width: 0%;
+  transition: 2s;
+  position: absolute;
+  background-color: rgb(196, 14, 8);
+  height: 100%;
+}
+
+.progress-bar #red-bar {
+  float: right;
 }
 
 .thing {
@@ -126,15 +143,32 @@ async function Fetch_Items() {
 
 let max_index = 1;
 let progress = 0;
+let anti_progress = 0;
 const progress_percent = ref([]);
+const anti_progress_percent = ref([]);
 
-function Update_Progress() {
-  progress++;
-  max_index
-  progress_percent.value = progress / max_index * 100;
-  console.log(progress_percent.value);
-  if (progress_percent.value == 100) {
-
+function Update_Progress(thing, i) {
+  console.log(thing, i)
+  if (!thing) {
+    if (!i) {
+      progress++
+    } else {
+      anti_progress--
+    }
+  } else {
+    if (i) {
+      progress++
+      anti_progress--
+    } else {
+      anti_progress++
+      progress--
+    }
+  }
+  anti_progress_percent.value = progress / max_index * 100;
+  progress_percent.value = anti_progress / max_index * -100;
+  console.log(progress_percent.value, anti_progress_percent.value);
+  if (( progress_percent.value - anti_progress_percent.value) == 100) {
+    console.log("Workout Complete")
   }
 }
 

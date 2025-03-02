@@ -4,8 +4,12 @@
     <h2 class="exercise-name">{{ name }}</h2>
     <div class="images">
       <div class="buttons" style="display: flex;">
-        <img src="/src/assets/no.png" class="no choice-buttons nb" @click="handleClick('no')">
-        <img src="/src/assets/yes.png" class="no choice-buttons yb" @click="handleClick('yes')">
+        <img src="/src/assets/no.png" class="no choice-buttons"
+          :class="{ grayscale: activeButton !== 'no', active: activeButton !== 'yes' }"
+          @click="() => { handleClick('no'); }">
+        <img src="/src/assets/yes.png" class="no choice-buttons"
+          :class="{ grayscale: activeButton !== 'yes', active: activeButton !== 'no' }"
+          @click="() => { handleClick('yes'); }">
       </div>
     </div>
   </div>
@@ -15,8 +19,17 @@
 .buttons * {
   filter: grayscale(80%);
   cursor: pointer;
-  transition: filter 0.3s;
+  transition: filter 0.2s ease;
 }
+
+.active {
+  filter: grayscale(0%);
+}
+
+.grayscale {
+  filter: grayscale(80%);
+}
+
 
 h1 {
   color: white;
@@ -72,7 +85,7 @@ h2 {
 <script setup>
 import { ref } from "vue";
 
-const emit = defineEmits(['incrementCounter'])
+const emit = defineEmits(['incrementCounter', 'decreaseCounter'])
 
 defineProps({
   title: {
@@ -91,14 +104,28 @@ defineProps({
 
 const selected = ref(null);
 const counted = ref(false);
+let activeButton = ref("");
 
 const handleClick = (choice) => {
+  if (selected.value == choice) {
+    return;
+  }
   selected.value = choice;
+  activeButton.value = choice;
 
   if (!counted.value) {
-    console.log("gay");
+    if (choice == "yes") {
+      emit("decreaseCounter", true);
+    } else {
+      emit("decreaseCounter", false);
+    }
     counted.value = true;
-    emit("incrementCounter");
+  } else {
+    if (choice == "yes") {
+      emit("incrementCounter", true);
+    } else {
+      emit("incrementCounter", false);
+    }
   }
 };
 
