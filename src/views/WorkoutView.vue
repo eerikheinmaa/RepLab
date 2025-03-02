@@ -16,8 +16,12 @@
       <h4>P R O G R E S S</h4>
       <div class="progress-bar">
         <div id="green-bar" :style="{ 'width': progress_percent + '%' }"></div>
-        <div id="red-bar" :style="{ 'width': -anti_progress_percent + '%' }"></div>
+        <div id="red-bar" :style="{ 'width': anti_progress_percent + '%' }"></div>
       </div>
+
+      <RouterLink to="/profile" class="done" :style="{ 'display': doneButton }" @click="DoneButtonPress()">
+        <p class="big-text" >DONE</p>
+      </RouterLink>
     </div>
   </div>
 </template>
@@ -37,6 +41,20 @@ h4 {
   margin-top: -5px;
   margin-bottom: 20px;
   letter-spacing: 5px;
+}
+
+.big-text {
+  border-radius: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+  margin-bottom: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: roboto;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 #green-bar {
@@ -60,6 +78,22 @@ h4 {
 
 .progress-bar #red-bar {
   float: right;
+}
+
+
+.done {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c92f1e;
+  width: 150px;
+  border-radius: 20px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .thing {
@@ -126,6 +160,21 @@ h4 {
   margin-top: -5px;
   overflow-x: hidden;
 }
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
 </style>
 
 <script setup>
@@ -144,16 +193,27 @@ async function Fetch_Items() {
 let max_index = 1;
 let progress = 0;
 let anti_progress = 0;
+let doneButton = ref([""]);
+doneButton.value = "none";
 const progress_percent = ref([]);
 const anti_progress_percent = ref([]);
+const overlay = ref(["none"]);
+
+function DoneButtonPress() {
+  overlay.value = "block";
+}
+
+function WorkoutDone() {
+  doneButton.value = "block";
+}
 
 function Update_Progress(thing, i) {
   console.log(thing, i)
   if (!thing) {
-    if (!i) {
+    if (i) {
       progress++
     } else {
-      anti_progress--
+      anti_progress++
     }
   } else {
     if (i) {
@@ -164,10 +224,14 @@ function Update_Progress(thing, i) {
       progress--
     }
   }
-  anti_progress_percent.value = progress / max_index * 100;
-  progress_percent.value = anti_progress / max_index * -100;
+
+  anti_progress_percent.value = anti_progress / max_index * 100;
+  progress_percent.value = progress / max_index * 100;
+
+  console.log(progress, anti_progress);
   console.log(progress_percent.value, anti_progress_percent.value);
-  if (( progress_percent.value - anti_progress_percent.value) == 100) {
+  if ((progress_percent.value + anti_progress_percent.value) == 100) {
+    WorkoutDone()
     console.log("Workout Complete")
   }
 }
