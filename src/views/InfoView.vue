@@ -1,5 +1,4 @@
 <template>
-  <router-link :to="'/help/' + choice.name"></router-link>
 
   <head>
     <meta charset="utf-8">
@@ -23,6 +22,82 @@
 </template>
 
 <style scoped>
+
+.big-text {
+  color: white;
+  font-family: roboto;
+  font-size: 18px;
+}
+
+.small-text {
+  color: white;
+  font-family: roboto;
+  font-size: 15px;
+}
+
+h1 {
+  color: white;
+  font-family: Oswald;
+  font-size: 40px;
+  font-weight: normal;
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 25px;
+  font-family: Oswald;
+  font-weight: normal;
+  color: white;
+  margin-bottom: 8px;
+  margin-top: 3px;
+  margin-left: 40px;
+}
+
+h3 {
+  margin-left: 40px;
+  font-size: 20px;
+  font-family: roboto;
+  color: white;
+  font-weight: normal;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.app {
+  width: 500px;
+  height: 150vh;
+  border: 2px solid black;
+  border-color: black;
+  position: relative;
+  overflow: hidden;
+  background-color: #0D0101;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.bench{
+  width: auto;
+  height: 150px;
+  margin-right: 20px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.description{
+  display: flex;
+  flex-direction: row;
+}
+
+.text2 {
+  margin-top: -10px;
+  margin-right: 20px;
+}
+
 html,
 body {
   height: 1030px;
@@ -106,18 +181,8 @@ const route = useRoute();
 const data = ref({});
 
 async function fetchItems() {
-  try {
-    const response = await fetch(`http://localhost:3000/api/exercise/id/${route.params.id}`);
-    if (!response.ok) throw new Error("Failed to fetch data");
-
-    const result = await response.json();
-    console.log("Fetched API response:", result);
-
-    return result || {};
-  } catch (error) {
-    console.error("Error fetching data:", error);
-    return {};
-  }
+  const response = await fetch(`http://localhost:3000/api/exercise/id/${route.params.id}`);
+  return await response.json();
 }
 
 
