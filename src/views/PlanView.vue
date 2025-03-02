@@ -97,7 +97,8 @@ import PlanItem from '@/components/PlanItem.vue';
 const data = ref([]);
 
 async function Fetch_Items() {
-  return [{ "name": "Chest Day", "exercises":[{"name":"Bench Press", "reps": "8-12 Reps", "time": 10 },{"name":"Bench Press", "reps": "8-12 Reps", "time": 10 },{"name":"Bench Press", "reps": "8-12 Reps", "time": 10 },]},];
+  const response = await fetch("http://localhost:3000/api/workout")
+  return await response.json();
 }
 
 onMounted(async () => {

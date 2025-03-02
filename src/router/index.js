@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Index from '../views/Index.vue'
-import Info from '../views/Info.vue'
+import Info from '../views/InfoView.vue'
 import Help from '../views/Help.vue'
 import Profile from '../views/Profile.vue'
-import Plan from '../views/Plan.vue'
+import Plan from '../views/PlanView.vue'
 import Nutrition from '@/views/Nutrition.vue'
 import Workout from '@/views/WorkoutView.vue'
 import Test from '@/views/Test.vue'
@@ -57,6 +57,11 @@ const router = createRouter({
       path: '/Test',
       name: 'Test',
       component: Test,
+    },
+    {
+      path: '/info/:id',
+      name: 'Info',
+      component: Info,
     },
   ],
 })

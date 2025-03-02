@@ -188,8 +188,6 @@ async function Fetch_Items() {
   return ["RepStart", "RepEnd"];
 }
 
-
-
 let max_index = 1;
 let progress = 0;
 let anti_progress = 0;

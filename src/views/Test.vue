@@ -1,26 +1,12 @@
 <template>
-  <HelloWorld>
-    <slot>{{ text }}</slot>
-  </HelloWorld>
+ User {{ $route.params.id }}
 </template>
 
 <style scoped></style>
 
 <script setup>
+import { useRoute } from 'vue-router'
+const route = useRoute()
 
-  const text = "HelloWorld";
-  console.log(text)
-
-  async 
-
-  function Create_Workout(type, exercise_name) {
-
-    return
-  }
-
-  async function Fetch_Items() {
-    const items = [["beginning", "RepStart"], ["end", "RepEnd"]];
-    return items;
-  }
-
+console.log(route.params.id)
 </script>
