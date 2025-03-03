@@ -30,7 +30,7 @@
 h1 {
   color: white;
   font-family: Oswald;
-  font-size: 25px;
+  font-size: 23px;
 }
 
 h4 {
