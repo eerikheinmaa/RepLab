@@ -8,12 +8,7 @@
     <div class="plan" v-if="data.length">
       <WorkoutItem :key="`workout-item-${index}`" v-for="(item, index) in data"
       :title="data.length"
-      :name="item.name"
       :reps="item.reps"
-      :time="item.time"
-      :image_id="item.image_id"
-      :description="item.description"
-      :index="index"
       @increment-counter="(n) => Update_Progress(true, n)"
       @decrease-counter="(n) => Update_Progress(false, n)" />
     </div>
@@ -21,6 +16,7 @@
       <h4>P R O G R E S S</h4>
       <div class="progress-bar">
         <div id="green-bar" :style="{ 'width': progress_percent + '%' }"></div>
+        <div id="red-bar" :style="{ 'width': anti_progress_percent + '%' }"></div>
       </div>
 
       <RouterLink to="/profile" class="done" :style="{ 'display': doneButton }" @click="DoneButtonPress()">

@@ -1,8 +1,16 @@
 <template>
-  <li>{{ exercise.name }} {{ exercise.reps }} {{ exercise.time }} Minutes</li>
+  <li class="itemList"> <div>{{ exercise.name }}</div> <div>{{ exercise.time }} Minutes </div> <div><RouterLink :to="`/info/${exercise.id}`"><img src="/src/assets/question.svg" class="question"></RouterLink></div></li>
 </template>
 
 <style scoped>
+
+.question {
+  height: 40px;
+}
+
+.itemList {
+  display: flex;
+}
 
 .opened {
   display: none;
@@ -50,6 +58,9 @@ h3 {
   margin-left: 30px;
   margin-top: 50px;
 }
+
+
+
 </style>
 
 <script setup>

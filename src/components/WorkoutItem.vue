@@ -4,9 +4,6 @@
     <div class="exercise-details">
       <h2 class="exercise-name">{{ name }}</h2>
       <p><strong>Reps:</strong> {{ reps }}</p>
-      <p><strong>Time:</strong> {{ time }} minutes</p>
-      <img :src="getExerciseImageUrl(image_id)" alt="Exercise Image" />
-      <p><strong>Description:</strong> {{ description }}</p>
     </div>
     <div class="images">
       <div class="buttons" style="display: flex;">
