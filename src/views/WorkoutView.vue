@@ -8,6 +8,7 @@
     <div class="plan" v-if="data.length">
       <WorkoutItem :key="`workout-item-${index}`" v-for="(item, index) in data"
       :title="data.length"
+      :name="data[index].name"
       :reps="item.reps"
       @increment-counter="(n) => Update_Progress(true, n)"
       @decrease-counter="(n) => Update_Progress(false, n)" />

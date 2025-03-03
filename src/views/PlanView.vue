@@ -34,7 +34,6 @@
 <style scoped>
 html,
 body {
-  height: auto;
   min-height: 1030px;
   margin: 0;
   display: flex;
@@ -88,6 +87,7 @@ h3 {
   padding: 3px;
   margin-left: 30px;
   margin-top: 50px;
+  margin-bottom: 100px;
 }
 </style>
 

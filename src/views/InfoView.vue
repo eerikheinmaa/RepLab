@@ -13,8 +13,8 @@
       <div class="info">
         <h1 id="headtext">{{ data.name }}</h1>
         <div id="container">
-          <h2 id="text">{{ data.description }}</h2>
-          <img id="image" :src="data.image_id" alt="Exercise Image">
+          <img id="image" class="image bench" :src="data.image_id" alt="Exercise Image">
+          <span class="text" style="white-space: pre-line">{{ formatText(data.description) }}</span>
         </div>
       </div>
     </div>
@@ -22,9 +22,9 @@
 </template>
 
 <style scoped>
-
-#image {
-  min-height: 200px;
+#conteiner {
+  display: flex;
+  text-align: right;
 }
 
 .big-text {
@@ -44,7 +44,6 @@ h1 {
   font-family: Oswald;
   font-size: 40px;
   font-weight: normal;
-  margin-left: 40px;
   margin-bottom: 20px;
 }
 
@@ -55,11 +54,10 @@ h2 {
   color: white;
   margin-bottom: 8px;
   margin-top: 3px;
-  margin-left: 40px;
+  text-wrap: wrap;
 }
 
 h3 {
-  margin-left: 40px;
   font-size: 20px;
   font-family: roboto;
   color: white;
@@ -81,7 +79,7 @@ h3 {
   flex-direction: column;
 }
 
-.bench{
+.bench {
   width: auto;
   height: 150px;
   margin-right: 20px;
@@ -90,9 +88,10 @@ h3 {
 .info {
   display: flex;
   flex-direction: column;
+  margin-left: 40px;
 }
 
-.description{
+.description {
   display: flex;
   flex-direction: row;
 }
@@ -104,7 +103,6 @@ h3 {
 
 html,
 body {
-  height: 1030px;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -130,22 +128,19 @@ h1 {
   font-family: Oswald;
   font-size: 40px;
   font-weight: normal;
-  margin-left: 40px;
   margin-bottom: 20px;
 }
 
-h2 {
+.text {
   font-size: 25px;
   font-family: Oswald;
   font-weight: normal;
   color: white;
   margin-bottom: 8px;
   margin-top: 3px;
-  margin-left: 40px;
 }
 
 h3 {
-  margin-left: 40px;
   font-size: 20px;
   font-family: roboto;
   color: white;
@@ -154,12 +149,6 @@ h3 {
   margin-bottom: 3px;
 }
 
-
-.bench {
-  width: auto;
-  height: 150px;
-  margin-right: 20px;
-}
 
 .info {
   display: flex;
@@ -181,14 +170,16 @@ h3 {
 }
 
 #image {
-  position: absolute;
+  float: left;
   right: 0px;
+  min-height: 140px;
+  width: auto;
+  margin-right: 15px;
 }
 
 #text {
   float: left;
 }
-
 </style>
 
 <script setup>
@@ -198,11 +189,14 @@ import { useRoute } from "vue-router";
 const route = useRoute();
 const data = ref({});
 
+function formatText(text) {
+  if (typeof text !== "string") return "";
+  return text.replace(/\n/g, "").replace(/(\d\.)/g, "\n$1");
+}
 async function fetchItems() {
   const response = await fetch(`http://localhost:3000/api/exercise/id/${route.params.id}`);
   return await response.json();
 }
-
 
 onMounted(async () => {
   data.value = await fetchItems();

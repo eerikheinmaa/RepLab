@@ -2,10 +2,9 @@
   <h1>{{ GenerateTitle(index, title) }}</h1>
   <div class="exercise">
     <div class="exercise-details">
-      <h2 class="exercise-name">{{ name }}</h2>
-      <p><strong>Reps:</strong> {{ reps }}</p>
-    </div>
-    <div class="images">
+      <h2 class="exercise-name">{{ name }}  {{ reps }}</h2>
+  </div>
+  <div class="images">
       <div class="buttons" style="display: flex;">
         <img src="/src/assets/yes.png" class="no choice-buttons"
           :class="{ grayscale: activeButton !== 'yes', active: activeButton !== 'no' }"
@@ -23,6 +22,10 @@
   margin: 0;
   font-size: 14px;
   color: black;
+}
+
+.exercise-details {
+  display: flex;
 }
 
 .buttons * {
@@ -76,13 +79,14 @@ h2 {
   width: 100px;
   display: flex;
   justify-content: flex-end;
-  margin-left: 10px;
+  margin-left: auto;
 }
 
 .exercise-name {
-  width: 450px;
+  width: auto;
   display: flex;
   justify-content: flex-start;
+
 }
 
 .choice-buttons {

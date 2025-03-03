@@ -1,6 +1,6 @@
 <template>
   <div class="itemList">
-    <div class="text">{{ exercise.name }}</div>
+    <div class="text"><div></div>{{ exercise.name }}</div>
     <div class="reps">{{ xtox(exercise.reps) }}</div>
     <div>
       <RouterLink :to="`/info/${exercise.id}`">
