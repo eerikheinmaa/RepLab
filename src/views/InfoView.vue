@@ -13,8 +13,8 @@
       <div class="info">
         <h1 id="headtext">{{ data.name }}</h1>
         <div id="container">
-          <img id="image" :src="data.image_id" alt="Exercise Image">
           <h2 id="text">{{ data.description }}</h2>
+          <img id="image" :src="data.image_id" alt="Exercise Image">
         </div>
       </div>
     </div>
@@ -22,6 +22,10 @@
 </template>
 
 <style scoped>
+
+#image {
+  min-height: 200px;
+}
 
 .big-text {
   color: white;

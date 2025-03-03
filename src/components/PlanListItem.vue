@@ -1,5 +1,5 @@
 <template>
-  <li class="itemList"> <div class="text">{{ exercise.name }}</div> <div class="reps">{{ exercise.reps }}</div> <div ><RouterLink :to="`/info/${exercise.id}`"><img src="/src/assets/question.svg" class="question"></RouterLink></div></li>
+  <li class="itemList"> <div class="text">{{ exercise.name }}</div> <div class="reps">{{ xtox(exercise.reps) }}</div> <div ><RouterLink :to="`/info/${exercise.id}`"><img src="/src/assets/question.svg" class="question"></RouterLink></div></li>
 </template>
 
 <style scoped>
@@ -110,5 +110,8 @@ defineProps({
   },
 })
 
+function xtox(str) {
+  return str.replace("*", "x")
+}
 
 </script>
