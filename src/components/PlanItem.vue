@@ -3,12 +3,21 @@
     <h1>{{ day }}</h1>
     <h2 class="est">Estimated time: {{ Total_Time(exercises) }}</h2>
     <ol :class="{'opened': !opened }" type="1">
-      <PlanListItem :key="`List-item-${index}`" v-for="(item, index) in exercises" :exercise="item"></PlanListItem>
+      <li v-for="(item, index) in exercises" :key="`List-item-${index}`">
+          <PlanListItem :exercise="item" />
+      </li>
     </ol>
   </div>
 </template>
 
 <style scoped>
+
+ol {
+  font-size: 25px;
+  font-family: Oswald;
+  font-weight: normal;
+  color: black;
+}
 
 .opened {
   display: none;
