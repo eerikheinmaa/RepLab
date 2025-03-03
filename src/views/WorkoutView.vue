@@ -1,22 +1,26 @@
 <template>
   <div class="thing">
-
     <div class="message">
       <h1>💪</h1>
       <h1 class="top-message">TODAY WE ARE GOING TO HIT BACK</h1>
       <h1 class="muscle-right">💪</h1>
     </div>
-    <div class="plan" v-if="data">
-      <WorkoutItem :key="`workout-item-${index}`" v-for="(item, index) in data" :title="data.length" :name="item"
-        :index="index" @increment-counter="(n) => Update_Progress(true, n)"
-        @decrease-counter="(n) => Update_Progress(false, n)">
-      </WorkoutItem>
+    <div class="plan" v-if="data.length">
+      <WorkoutItem :key="`workout-item-${index}`" v-for="(item, index) in data"
+      :title="data.length"
+      :name="item.name"
+      :reps="item.reps"
+      :time="item.time"
+      :image_id="item.image_id"
+      :description="item.description"
+      :index="index"
+      @increment-counter="(n) => Update_Progress(true, n)"
+      @decrease-counter="(n) => Update_Progress(false, n)" />
     </div>
     <div class="progress">
       <h4>P R O G R E S S</h4>
       <div class="progress-bar">
         <div id="green-bar" :style="{ 'width': progress_percent + '%' }"></div>
-        <div id="red-bar" :style="{ 'width': anti_progress_percent + '%' }"></div>
       </div>
 
       <RouterLink to="/profile" class="done" :style="{ 'display': doneButton }" @click="DoneButtonPress()">
@@ -185,8 +189,27 @@ import WorkoutItem from '@/components/WorkoutItem.vue';
 const data = ref([]);
 
 async function Fetch_Items() {
-  return ["RepStart", "RepEnd"];
+  try {
+    const response = await fetch('http://localhost:3000/api/workout');
+    const workouts = await response.json();
+
+    if (!response.ok) {
+      throw new Error(workouts.message || 'Failed to fetch workouts');
+    }
+
+    // Flattening exercises from all workouts into a single array
+    const exercises = workouts.flatMap(workout => workout.exercises);
+
+    console.log("Exercises fetched:", exercises);  // Log the fetched exercises array to check image_id
+
+    return exercises;
+  } catch (error) {
+    console.error('Error fetching workouts:', error);
+    return [];
+  }
 }
+
+
 
 let max_index = 1;
 let progress = 0;
@@ -236,7 +259,11 @@ function Update_Progress(thing, i) {
 
 onMounted(async () => {
   data.value = await Fetch_Items();
-  max_index = data.value.length
   console.log("Fetched data:", data.value);
+  // Log each item to check if image_id is available
+  data.value.forEach((item, index) => {
+    console.log(`Item ${index} image_id:`, item.image_id);
+  });
+  max_index = data.value.length;
 });
 </script>

@@ -285,16 +285,6 @@ onMounted(() => {
       <div class="overlay16" v-show="isBoxOpen34">Arms</div>
       <div class="overlay20" v-show="isBoxOpen35">Back</div>
 
-
-  
-      
-      
-      
-      
-     
-      
-      
-      
       <img src="/src/assets/arrow.svg" class="cl arrow calender-extension">
     </div>
   </header>

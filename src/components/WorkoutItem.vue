@@ -1,7 +1,13 @@
 <template>
   <h1>{{ GenerateTitle(index, title) }}</h1>
   <div class="exercise">
-    <h2 class="exercise-name">{{ name }}</h2>
+    <div class="exercise-details">
+      <h2 class="exercise-name">{{ name }}</h2>
+      <p><strong>Reps:</strong> {{ reps }}</p>
+      <p><strong>Time:</strong> {{ time }} minutes</p>
+      <img :src="getExerciseImageUrl(image_id)" alt="Exercise Image" />
+      <p><strong>Description:</strong> {{ description }}</p>
+    </div>
     <div class="images">
       <div class="buttons" style="display: flex;">
         <img src="/src/assets/no.png" class="no choice-buttons"
@@ -16,6 +22,12 @@
 </template>
 
 <style scoped>
+.exercise-details p {
+  margin: 0;
+  font-size: 14px;
+  color: black;
+}
+
 .buttons * {
   filter: grayscale(80%);
   cursor: pointer;
@@ -29,7 +41,6 @@
 .grayscale {
   filter: grayscale(80%);
 }
-
 
 h1 {
   color: white;
@@ -58,8 +69,10 @@ h2 {
   flex-direction: row;
   align-items: center;
   width: 97%;
-  height: 50px;
+  height: auto;
   background-color: #d9d9d9;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .images {
@@ -96,10 +109,26 @@ defineProps({
     type: String,
     required: true,
   },
+  reps: {
+    type: Number,
+    required: false,
+  },
+  time: {
+    type: String,
+    required: false,
+  },
+  description: {
+    type: String,
+    required: false,
+  },
   index: {
     type: Number,
     required: true,
   },
+  image_id: {
+    type: String,
+    required: true,
+  }
 })
 
 const selected = ref(null);
@@ -128,6 +157,43 @@ const handleClick = (choice) => {
     }
   }
 };
+
+const getExerciseImageUrl = (image_id) => {
+  // If image_id is undefined or empty, return a fallback image
+  if (!image_id) {
+    console.warn("No image_id provided, using fallback image.");
+    return '/src/assets/no-image.png';  // Fallback image path
+  }
+
+  // Log the image_id to ensure it's being passed correctly
+  console.log("Received image_id:", image_id);
+
+  // If the path starts with /src/assets/exercise_image/ then we can return it directly
+  if (image_id.startsWith('/src/assets/exercise_image/')) {
+    return image_id;  // Return the image path directly
+  }
+
+  // Otherwise, append the image formats (webp, png, jpg)
+  const imageFormats = ['png', 'jpg', 'webp'];
+  for (const format of imageFormats) {
+    try {
+      const imagePath = new URL(image_id, import.meta.url).href;  // Try resolving the path
+      console.log(`Image URL generated: ${imagePath}`);
+      return imagePath;
+    } catch (err) {
+      console.log(`Error loading image ${image_id}.${format}`, err);
+    }
+  }
+
+  // If no image format is found, return a default image
+  console.warn("Returning default image because no valid format was found.");
+  return '/src/assets/no-image.png';  // Ensure this path works
+};
+
+
+
+
+
 
 const Motivations = {
   beginning: [
