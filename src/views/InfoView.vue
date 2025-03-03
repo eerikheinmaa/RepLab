@@ -171,6 +171,20 @@ h3 {
   margin-top: -10px;
   margin-right: 20px;
 }
+
+#headtext {
+  padding-top: 60px;
+}
+
+#image {
+  position: absolute;
+  right: 0px;
+}
+
+#text {
+  float: left;
+}
+
 </style>
 
 <script setup>

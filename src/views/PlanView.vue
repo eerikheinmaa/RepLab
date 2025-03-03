@@ -34,7 +34,8 @@
 <style scoped>
 html,
 body {
-  height: 1030px;
+  height: auto;
+  min-height: 1030px;
   margin: 0;
   display: flex;
   justify-content: center;
