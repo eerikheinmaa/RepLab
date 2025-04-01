@@ -15,7 +15,7 @@
     <div id="map">
     </div>
     <h2>Contacts:</h2>
-    <h3>Email: beast.app@gmail.com</h3>
+    <h3>Email: support@replab.com</h3>
     <h3>Phone nr: +372 3490 2330</h3>
 
 
