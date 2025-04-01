@@ -167,7 +167,7 @@ li {
 }
 
 .open-button {
-  background-color: #c92f1e;
+  background-color: #FF6554;
   width: 150px;
   border-radius: 20px;
   height: 50px;
@@ -179,7 +179,7 @@ li {
 }
 
 .start-workout {
-  background-color: #c92f1e;
+  background-color: #FF6554;
   width: 250px;
   height: 50px;
   border-radius: 20px;

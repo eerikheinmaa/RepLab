@@ -43,8 +43,8 @@ const route = useRoute()
         <RouterLink to="/nutrition">
           <button class="open-button"><p class="big-text">OPEN</p></button>
         </RouterLink>
-          
-        
+
+
       </div>
       <div class="start-workout-button">
         <RouterLink to="/workout" class="start-workout-button">
@@ -178,7 +178,7 @@ body {
 }
 
 .open-button {
-  background-color: #c92f1e;
+  background-color: #FF6554;
   width: 150px;
   border-radius: 20px;
   height: 50px;
@@ -190,7 +190,7 @@ body {
 }
 
 .start-workout {
-  background-color: #c92f1e;
+  background-color: #FF6554;
   width: 250px;
   height: 50px;
   border-radius: 20px;
@@ -265,7 +265,7 @@ h2 {
   font-family: Oswald;
   font-weight: bold;
   color: white;
-  
+
 }
 
 h1 {

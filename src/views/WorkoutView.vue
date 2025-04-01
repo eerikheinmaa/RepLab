@@ -86,7 +86,7 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #c92f1e;
+  background-color: #FF6554;
   width: 150px;
   border-radius: 20px;
   height: 50px;
