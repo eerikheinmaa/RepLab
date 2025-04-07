@@ -122,6 +122,18 @@ const currentMonthName = computed(() =>
 const showNote = ref(false)
 const noteText = ref('This is your note')
 
+const noteOptions = [
+  "Leg Day",
+  "Arm Day",
+  "Keep it simple today.",
+  "Call someone you care about."
+]
+
+const generateNoteText = (dayNumber) => {
+  const index = dayNumber % 4
+  return noteOptions[index]
+}
+
 const selectDay = (day) => {
   if (selectedDate.value?.toDateString() === day.date.toDateString()) {
     showNote.value = !showNote.value
@@ -160,7 +172,7 @@ const selectDay = (day) => {
           ]" @click="selectDay(day)">
             {{ day.date.getDate() }}
             <div v-if="showNote && day.date.toDateString() === selectedDate?.toDateString()" class="note-popup">
-              {{ noteText }}
+              {{ day.date }}
             </div>
           </div>
           <img src="/src/assets/arrow.svg" class="cl arrow calender-extension">
