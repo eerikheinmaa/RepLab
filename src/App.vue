@@ -167,7 +167,7 @@ const selectDay = (day) => {
         <div class="number-row" v-for="(row, rowIndex) in calendarGrid" :key="rowIndex">
           <div v-for="(day, dayIndex) in row" :key="dayIndex" :class="[
             'numbers',
-            day.isToday ? 'today' : '',
+            day.isToday ? 'today' : null,
             day.isCurrentMonth ? '' : 'next-month'
           ]" @click="selectDay(day)">
             {{ day.date.getDate() }}
@@ -327,6 +327,12 @@ h3 {
   text-shadow: 0 0 10px white, 0 0 20px white, 0 0 40px white, 0 0 60px white, 0 0 80px white, 0 0 100px white, 0 0 120px white, 0 0 140px white, 0 0 160px white, 0 0 180px white, 0 0 200px white;
 }
 
+.today {
+  color: rgb(120, 44, 44);
+  font-weight: bold;
+  text-shadow: 0 0 10px white, 0 0 20px white, 0 0 40px white, 0 0 60px white, 0 0 80px white, 0 0 100px white, 0 0 120px white, 0 0 140px white, 0 0 160px white, 0 0 180px white, 0 0 200px white;
+}
+
 #Closed,
 #Opened {
   position: fixed;
@@ -467,5 +473,9 @@ h3 {
   padding-right: 15px;
   align-items: center;
   justify-content: center;
+}
+
+.next-month {
+  color: #2f2f2f;
 }
 </style>
