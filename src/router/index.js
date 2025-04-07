@@ -7,6 +7,7 @@ import Plan from '../views/PlanView.vue'
 import Nutrition from '@/views/Nutrition.vue'
 import Workout from '@/views/WorkoutView.vue'
 import Test from '@/views/Test.vue'
+import LandingView from '@/views/LandingView.vue'
 
 
 const router = createRouter({
@@ -62,6 +63,11 @@ const router = createRouter({
       path: '/info/:id',
       name: 'Info',
       component: Info,
+    },
+    {
+      path:"/landing",
+      name: "landing",
+      component: LandingView,
     },
   ],
 })
