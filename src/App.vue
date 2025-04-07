@@ -125,8 +125,8 @@ const noteText = ref('This is your note')
 const noteOptions = [
   "Leg Day",
   "Arm Day",
-  "Keep it simple today.",
-  "Call someone you care about."
+  "Back Day",
+  "Chest Day"
 ]
 
 const generateNoteText = (dayNumber) => {
@@ -172,7 +172,7 @@ const selectDay = (day) => {
           ]" @click="selectDay(day)">
             {{ day.date.getDate() }}
             <div v-if="showNote && day.date.toDateString() === selectedDate?.toDateString()" class="note-popup">
-              {{ day.date }}
+              {{ generateNoteText(day.date.getDate()) }}
             </div>
           </div>
           <img src="/src/assets/arrow.svg" class="cl arrow calender-extension">
@@ -283,11 +283,17 @@ footer {
   border: none;
 }
 
-h1 {
+h1,
+span {
   color: white;
   font-family: Oswald;
   font-size: 25px;
   margin-top: 5px;
+}
+
+span {
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 h2 {
