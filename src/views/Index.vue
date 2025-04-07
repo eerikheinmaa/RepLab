@@ -21,12 +21,12 @@ const route = useRoute()
       <div class="news">
         <h1 class="greeting"> HELLO, JOHN!</h1>
         <div class="news1">
-          <h2 class="mike">MIKE TYSON DEAD AT 57</h2>
+          <h2 class="mike">MIKE TYSON HELPS THE HOMELESS</h2>
           <h3>AFTER YEARS OF FIGHTING MIK...</h3>
         </div>
         <div class="news2">
           <h2 class="lebron">LEBRON SPOTTED AT WENDYS</h2>
-          <h3>LEBRON IS A GLIZZY GOBBLER...</h3>
+          <h3>The Best thing about Wendy's i...</h3>
         </div>
         <p2 class="small-text">READ MORE</p2>
       </div>
@@ -41,17 +41,19 @@ const route = useRoute()
           <img src="/src/assets/protein (2).svg" class="protein">
         </div>
         <RouterLink to="/nutrition">
-          <button class="open-button"><p class="big-text">OPEN</p></button>
+          <button class="open-button">
+            <p class="big-text">OPEN</p>
+          </button>
         </RouterLink>
 
 
       </div>
       <div class="start-workout-button">
         <RouterLink to="/workout" class="start-workout-button">
-      <button class="start-workout">
-        <p class="big-text">START WORKOUT</p>
-      </button>
-    </RouterLink>
+          <button class="start-workout">
+            <p class="big-text">START WORKOUT</p>
+          </button>
+        </RouterLink>
       </div>
     </div>
   </body>
@@ -269,16 +271,16 @@ h2 {
 }
 
 h1 {
-    font-family: Oswald;
-    font-size: 40px;
-    font-weight: bold;
+  font-family: Oswald;
+  font-size: 40px;
+  font-weight: bold;
 }
 
 h3 {
-    font-size: 20px;
-    font-family: roboto;
-    color: white;
-    font-weight: normal;
-    margin-bottom: 10px;
+  font-size: 20px;
+  font-family: roboto;
+  color: white;
+  font-weight: normal;
+  margin-bottom: 10px;
 }
 </style>

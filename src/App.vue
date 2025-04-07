@@ -228,14 +228,13 @@ footer {
 
 .note-popup {
   position: absolute;
-  background: #4d4d4d6b;
-  color: white;
-  text-shadow: #18152b;
+  background: #090909b4;
+  color: rgb(255, 255, 255);
   border: 1px solid #ccc;
   border-radius: 6px;
   padding: 0.5rem;
   font-size: 0.8rem;
-  margin-top: 0.3rem;
+  margin-top: -5.4rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   z-index: 10;
 }
@@ -376,7 +375,6 @@ h3 {
   width: auto;
   transform: scaleY(-1);
   z-index: 12;
-  background-color: #000000db;
   position: absolute;
   right: 0px;
   top: 0px;
@@ -384,10 +382,12 @@ h3 {
 
 #Closed .arrow {
   transform: scaleY(1);
+  background-color: #000000db;
 }
 
 #Opened .arrow {
   position: absolute;
+  top: 469px
 }
 
 .calender::-webkit-scrollbar {

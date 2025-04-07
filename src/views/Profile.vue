@@ -14,7 +14,7 @@
           <img src="/src/assets/lebron.png" class="lebron-pic">
         </div>
         <div class="profile-name">
-          <h4 class="lebron-name">LE GOAT</h4>
+          <h4 class="lebron-name">Lebron</h4>
           <h2 class="streak">Streak: <img src="/src/assets/fire.svg" class="fire"> 107</h2>
         </div>
       </div>
